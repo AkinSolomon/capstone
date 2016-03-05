@@ -20,7 +20,6 @@ def normalize(img):
 
 N = 0
 
-#Create Empty List for normalized images
 imgArray = []
 
 # Iterate through files in faceDir
@@ -28,8 +27,9 @@ for subdir, dirs, files in os.walk(FACE_DIR):
 	for file in files:
 		filePath = os.path.join(subdir, file)
 		img = cv2.imread(filePath, 0)
-		#Add normalized image to list
 		imgArray.append(normalize(img))
+		print N
+		print imgArray[N].mean()
 		N += 1
 
 print N
