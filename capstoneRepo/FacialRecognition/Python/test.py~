@@ -1,3 +1,3 @@
 #Teddy used this to practice Git stuff :)
 
-print "Hello World"
+print "Hello World, from Teddy"
