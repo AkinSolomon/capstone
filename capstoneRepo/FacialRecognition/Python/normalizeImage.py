@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 
 #FACE_DIR is the folder that holds all of the training set
-FACE_DIR = "faces2"
+FACE_DIR = "faces1"
 #Desired Mean is the goal of the mean after normalization
 DESIRED_MEAN = 127.5
 #Desired STD is the goal STD after normalization
