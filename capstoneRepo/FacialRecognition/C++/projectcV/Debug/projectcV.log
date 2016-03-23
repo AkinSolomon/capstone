@@ -1,0 +1,21 @@
+﻿Build started 3/22/2016 11:55:57 AM.
+     1>Project "C:\Users\Yonglan\Documents\capstone\capstoneRepo\FacialRecognition\C++\projectcV\projectcV.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\opencv\build\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\yonglan\documents\capstone\capstonerepo\facialrecognition\c++\projectcv\facerec.h(313): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\yonglan\documents\capstone\capstonerepo\facialrecognition\c++\projectcv\facerec.h(347): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\yonglan\documents\capstone\capstonerepo\facialrecognition\c++\projectcv\facerec.h(353): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\yonglan\documents\capstone\capstonerepo\facialrecognition\c++\projectcv\facerec.h(354): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\yonglan\documents\capstone\capstonerepo\facialrecognition\c++\projectcv\imgproc.h(74): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\yonglan\documents\capstone\capstonerepo\facialrecognition\c++\projectcv\imgproc.h(83): warning C4715: 'edgeDetectionsCanny' : not all control paths return a value
+     1>c:\users\yonglan\documents\capstone\capstonerepo\facialrecognition\c++\projectcv\facerec.h(363): warning C4715: 'FaceRecognition' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Yonglan\Documents\capstone\capstoneRepo\FacialRecognition\C++\projectcV\Debug\projectcV.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\opencv\build\x86\vc12\lib opencv_calib3d2410d.lib opencv_contrib2410d.lib opencv_core2410d.lib opencv_features2d2410d.lib opencv_flann2410d.lib opencv_gpu2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_legacy2410d.lib opencv_ml2410d.lib opencv_nonfree2410d.lib opencv_objdetect2410d.lib opencv_ocl2410d.lib opencv_photo2410d.lib opencv_stitching2410d.lib opencv_superres2410d.lib opencv_ts2410d.lib opencv_video2410d.lib opencv_videostab2410d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Yonglan\Documents\capstone\capstoneRepo\FacialRecognition\C++\projectcV\Debug\projectcV.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Yonglan\Documents\capstone\capstoneRepo\FacialRecognition\C++\projectcV\Debug\projectcV.lib" /MACHINE:X86 Debug\main.obj
+         Debug\VideoCap.obj
+         projectcV.vcxproj -> C:\Users\Yonglan\Documents\capstone\capstoneRepo\FacialRecognition\C++\projectcV\Debug\projectcV.exe
+     1>Done Building Project "C:\Users\Yonglan\Documents\capstone\capstoneRepo\FacialRecognition\C++\projectcV\projectcV.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.61
