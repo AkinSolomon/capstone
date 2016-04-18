@@ -11,7 +11,7 @@ FACE_DIR = "faces2"
 #Desired Mean is the goal of the mean after normalization
 DESIRED_MEAN = 127.5
 #Desired STD is the goal STD after normalization
-DESIRED_STD = 70.0
+DESIRED_STD = 60.0
 
 #Normalizes a copy of the img arguement
 def normalize(img):
