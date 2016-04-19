@@ -1,4 +1,4 @@
-# Train.py
+# speaker.py 
 # Group 7 ECE 4900
 # Edward Reehorst w/ help from
 # http://minhdo.ece.illinois.edu/teaching/speaker_recognition/
@@ -56,7 +56,7 @@ def disteu(x, y):
 #       c contains the result VQ codebook (k columns, one for each centroids)
 def vqlbg(d, k):
 	# Constants
-	split = 0.01;
+	split = 0.1;
 	sigma = 0.001;
 
 	#Initial Codebook of one entry contains single centroid
@@ -136,6 +136,10 @@ def mel2hz(mel):
     """
     return 700*(10**(mel/2595.0)-1)
 
+def toMono(sig):
+	if sig.ndim > 1:
+		return sig[:,0]
+	return sig
 
 # MFCC Calculate the mel frequencey cepstrum coefficients (MFCC) of a signal
 #
@@ -172,7 +176,7 @@ def mfcc(s, fs):
 		n2 = math.floor(N/2)
 		ms = np.dot(m , abs(np.power(frameFFT[0:n2+1],2)))
 		#Last step, compute mel-frequency cepstrum coefficients
-		c[:,x] = fft.dct(np.log(ms));
+		c[:,x] = fft.dct(np.log(ms.clip(min=0.00001)));
 	np.delete(c,0,0)    # exclude 0'th order cepstral coefficient
 	
 	return c
@@ -200,9 +204,8 @@ def train(traindir, n):
 		print file
 
 		[fs, s] = wav.read(file)
-
+		s = toMono(s)
 		v = mfcc(s, fs);            # Compute MFCC's
-		print i-1
 		code.append(vqlbg(v, k))      # Train VQ codebook
 
 	return code
@@ -221,19 +224,18 @@ def test(testdir, n, code):
 #
 # Example:
 #       >> test('C:\data\test\', 8, code);
-	Dmax = 7;
+	Dmax = 70;
 
 
 	for k in range(1,n+1):                     # read test sound file of each speaker
 		file = '{0}s{1}.wav'.format(testdir, k)
-		print file
 		[fs, s] = wav.read(file)  
-        
+        s = toMono(s)
 		v = mfcc(s, fs)           # Compute MFCC's
    
 		distmin = float('inf')
 		k1 = 0;
-   
+
 		for l in range(0,len(code)):    # each trained codebook, compute distortion
 			d = disteu(v, code[l]); 
 			dist = sum(np.amin(d,axis=1)) / d.shape[0]
@@ -243,13 +245,13 @@ def test(testdir, n, code):
 				k1 = l;
 
 		if distmin<Dmax:
-			msg = 'Speaker {0} matches with speaker {1}\nDist of {2}'.format(k, k1,distmin)
+			msg = 'Speaker {0} matches with speaker {1}\nDist of {2}'.format(k, k1+1,distmin)
 		else:
-			msg = 'Speaker {0} does not match and of the entrusted users\nclosest match was speaker {1} with dist of {2}'.format(k, k1,distmin)
+			msg = 'Speaker {0} does not match and of the entrusted users\nclosest match was speaker {1} with dist of {2}'.format(k, k1+1,distmin)
 
 		print msg
 
 
-c = train("data/train/",8)
-test("data/test/",8,c)
+c = train("data/train/",12)
+test("data/test/",16,c)
 

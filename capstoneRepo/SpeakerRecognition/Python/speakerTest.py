@@ -1,19 +1,15 @@
-# speaker.py 
+# SpeakerTest.py 
 # Group 7 ECE 4900
 # Edward Reehorst w/ help from
 # http://minhdo.ece.illinois.edu/teaching/speaker_recognition/
 # Text independent speaker recognition system based on mel frequency coeffiecient
 # features and vector quantization
 
-
 import numpy as np
 import scipy.fftpack as fft
 import scipy.io.wavfile as wav
 
 import math
-
-
-
 
 # DISTEU Pairwise Euclidean distances between columns of two matrices
 #
@@ -140,6 +136,8 @@ def toMono(sig):
 	if sig.ndim > 1:
 		return sig[:,0]
 	return sig
+		
+	
 
 # MFCC Calculate the mel frequencey cepstrum coefficients (MFCC) of a signal
 #
@@ -202,7 +200,6 @@ def train(traindir, n):
 	for i in range(1,n+1):  			# train a VQ codebook for each speaker
 		file = "{0}s{1}.wav".format(traindir,i)
 		print file
-
 		[fs, s] = wav.read(file)
 		s = toMono(s)
 		v = mfcc(s, fs);            # Compute MFCC's
@@ -224,7 +221,6 @@ def test(testdir, n, code):
 #
 # Example:
 #       >> test('C:\data\test\', 8, code);
-	Dmax = 70;
 
 
 	for k in range(1,n+1):                     # read test sound file of each speaker
@@ -237,19 +233,12 @@ def test(testdir, n, code):
 		k1 = 0;
 
 		for l in range(0,len(code)):    # each trained codebook, compute distortion
-			d = disteu(v, code[l]); 
+			d = disteu(v, code[l]);
 			dist = sum(np.amin(d,axis=1)) / d.shape[0]
-      
-			if dist < distmin:
-				distmin = dist;
-				k1 = l;
 
-		if distmin<Dmax:
-			msg = 'Speaker {0} matches with speaker {1}\nDist of {2}'.format(k, k1+1,distmin)
-		else:
-			msg = 'Speaker {0} does not match and of the entrusted users\nclosest match was speaker {1} with dist of {2}'.format(k, k1+1,distmin)
-
-		print msg
+			print "{0}\t{1}\t{2}".format(k,l+1,dist)
+		
+		print "\n"
 
 
 c = train("data/train/",12)
