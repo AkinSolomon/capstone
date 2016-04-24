@@ -5,15 +5,11 @@
 # Text independent speaker recognition system based on mel frequency coeffiecient
 # features and vector quantization
 
-
 import numpy as np
 import scipy.fftpack as fft
 import scipy.io.wavfile as wav
 
 import math
-
-
-
 
 # DISTEU Pairwise Euclidean distances between columns of two matrices
 #
@@ -136,6 +132,7 @@ def mel2hz(mel):
     """
     return 700*(10**(mel/2595.0)-1)
 
+
 def toMono(sig):
 	if sig.ndim > 1:
 		return sig[:,0]
@@ -181,77 +178,50 @@ def mfcc(s, fs):
 	
 	return c
 	
-def train(traindir, n):
+def train(trainfile):
 # Speaker Recognition: Training Stage
 #
 # Input:
-#       traindir : string name of directory contains all train sound files
-#       n        : number of train files in traindir
+#       trainfile : string name of .wav file to use for training
 #
 # Output:
-#       code     : trained VQ codebooks, code{i} for i-th speaker
+#       code     : trained VQ codebooks, code input speaker
 #
-# Note:
-#       Sound files in traindir is supposed to be: 
-#                       s1.wav, s2.wav, ..., sn.wav
-# Example:
-#       >> code = train('C:\data\train\', 8);
 
 	k = 8;                         # number of centroids required
-	code = []
-	for i in range(1,n+1):  			# train a VQ codebook for each speaker
-		file = "{0}s{1}.wav".format(traindir,i)
-		print file
 
-		[fs, s] = wav.read(file)
-		s = toMono(s)
-		v = mfcc(s, fs);            # Compute MFCC's
-		code.append(vqlbg(v, k))      # Train VQ codebook
+	[fs, s] = wav.read(trainfile)
+	s = toMono(s)
+	v = mfcc(s, fs)          # Compute MFCC's
+	return vqlbg(v, k)      # Train VQ codebook
 
-	return code
-
-def test(testdir, n, code):
+def test(testfile, code):
 # Speaker Recognition: Testing Stage
 #
 # Input:
-#       testdir : string name of directory contains all test sound files
-#       n       : number of test files in testdir
-#       code    : codebooks of all trained speakers
+#       testfile : string name of test sound file
+#       code    : codebooks of one trained speaker
 #
-# Note:
-#       Sound files in testdir is supposed to be: 
-#               s1.wav, s2.wav, ..., sn.wav
-#
-# Example:
-#       >> test('C:\data\test\', 8, code);
-	Dmax = 70;
+# Output:
+#		match: returns true if testfile matchs code
 
+	Dmax = 40;
 
-	for k in range(1,n+1):                     # read test sound file of each speaker
-		file = '{0}s{1}.wav'.format(testdir, k)
-		[fs, s] = wav.read(file)  
-        s = toMono(s)
-		v = mfcc(s, fs)           # Compute MFCC's
+	[fs, s] = wav.read(testfile)  
+	s = toMono(s)
+	v = mfcc(s, fs)           # Compute MFCC's
    
-		distmin = float('inf')
-		k1 = 0;
+	distmin = float('inf')
 
-		for l in range(0,len(code)):    # each trained codebook, compute distortion
-			d = disteu(v, code[l]); 
-			dist = sum(np.amin(d,axis=1)) / d.shape[0]
+	for l in range(0,len(code)):    # each trained codebook, compute distortion
+		d = disteu(v, code); 
+		dist = sum(np.amin(d,axis=1)) / d.shape[0]
       
-			if dist < distmin:
-				distmin = dist;
-				k1 = l;
+		if dist < distmin:
+			distmin = dist;
 
-		if distmin<Dmax:
-			msg = 'Speaker {0} matches with speaker {1}\nDist of {2}'.format(k, k1+1,distmin)
-		else:
-			msg = 'Speaker {0} does not match and of the entrusted users\nclosest match was speaker {1} with dist of {2}'.format(k, k1+1,distmin)
-
-		print msg
-
-
-c = train("data/train/",12)
-test("data/test/",16,c)
+	if distmin<Dmax:
+		return True
+	
+	return False
 
