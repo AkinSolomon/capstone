@@ -15,7 +15,7 @@ class BioLock(tk.Tk):
 		container.grid_columnconfigure(0, weight=1)
 
 		#TODO Initialize user dictionary (either load from file or start empty one)
-		
+		self.users = {}
 
 		# Initalize new user variables
 		self.newAccess = False
@@ -25,8 +25,11 @@ class BioLock(tk.Tk):
 		self.newID = 0
 		self.newCode = None
 
-		# Initalize test variablesw
-
+		# Initalize test variables
+		self.access = False
+		self.admin = False
+		self.id = -1
+		self.code = None
 
 		#Initialize Frames
 		self.frames = {}
@@ -54,11 +57,20 @@ class BioLock(tk.Tk):
 
 	def enrollFace(self):
 		#Face enrollment code goes here
+		#Set self.newID
 		self.show_frame(enrollVoice)
+
+	def enrollVoice(self):
+		#Voice enrollment code goes here
+		#Set self.newCode
+
+		#Save data to map and storage
+		self.show_frame(faceCapture)
 
 	def faceAuth(self):
 		#Facial Recognition
-		successful=fr.Authenticate() #Add id
+		#successful=fr.Authenticate() #Add id
+		successful = True
 		print successful
 		if successful:
 			#TODO Save id
@@ -105,7 +117,9 @@ class enrollFace(tk.Frame):
 		tk.Frame.__init__(self,parent)
 		label = tk.Label(self, text= "Enrollment Face Caputre")
 		label.pack()
-		button = tk.Button(self, text = "Capture Facial Data", command=controller.faceEnroll)
+		instr = tk.Label(self, text="After pushing button please remain still, facing the camera")
+		instr.pack()
+		button = tk.Button(self, text = "Capture Facial Data", command=controller.enrollFace)
 		button.pack()
 
 class enrollVoice(tk.Frame):
@@ -114,7 +128,9 @@ class enrollVoice(tk.Frame):
 		tk.Frame.__init__(self,parent)
 		label = tk.Label(self, text= "Enrollment Voice Capture")
 		label.pack()
-		button = tk.Button(self, text = "Capture Facial Data", command=controller.faceAuth)
+		instr = tk.Label(self, text="After pushing the button please say your passphrase")
+		instr.pack()
+		button = tk.Button(self, text = "Record Voice Sample", command=controller.enrollVoice)
 		button.pack()
 
 class faceCapture(tk.Frame):
@@ -123,6 +139,8 @@ class faceCapture(tk.Frame):
 		tk.Frame.__init__(self,parent)
 		label = tk.Label(self, text= "Face Image Capture")
 		label.pack()
+		instr = tk.Label(self, text="After pushing the button please remain still, facing the camera")
+		instr.pack()
 		button = tk.Button(self, text = "Capture Facial Data", command=controller.faceAuth)
 		button.pack()
 		
@@ -133,6 +151,7 @@ class voiceCapture(tk.Frame):
 		tk.Frame.__init__(self,parent)
 		label = tk.Label(self, text= "Voice Capture")
 		label.pack()
+		instr = tk.Label(self, text="After pushing the button please say your passphrase")
 		button = tk.Button(self, text = "Ready to Record", command=controller.voiceAuth)
 		button.pack()
 
