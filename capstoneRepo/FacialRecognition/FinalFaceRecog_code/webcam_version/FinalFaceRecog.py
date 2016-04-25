@@ -401,10 +401,10 @@ def Authenticate():
 		s=f.readline()
 	if ave < 50 and flag==1:
 		print "authenticated"
-		return 1
+		return 1,element
 	else:
 		print "could not enter"
-		return 0
+		return 0,-1
 
 #------------------------------------------------------------------------------------TESTING MAIN
 
@@ -414,6 +414,7 @@ if __name__ == '__main__':
 	#name="kayleetesting"
 	#LBPHupdate(name)
 
-	successful = Authenticate()
+	successful,label = Authenticate()
 	print successful
+	print label
 	
