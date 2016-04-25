@@ -2,7 +2,6 @@ import Tkinter as tk
 import numpy as np
 import FinalFaceRecog as fr
 #TODO from speaker import test,train
-#TODO from face import test,train
 
 class BioLock(tk.Tk):
 	def __init__(self, *args, **kwargs):
@@ -20,13 +19,13 @@ class BioLock(tk.Tk):
 
 		# Initalize new user variables
 		self.newAccess = False
-		self.newAccessString = ""
+		self.newAccessString = None
 		self.newAdmin = False
-		self.newAdminString = ""
+		self.newAdminString = None
 		self.newID = 0
 		self.newCode = None
 
-		# Initalize test variables
+		# Initalize test variablesw
 
 
 		#Initialize Frames
@@ -47,26 +46,35 @@ class BioLock(tk.Tk):
 	
 	
 	def enrollPriv(self):
-		if self.newAccessString == "Yes":
+		if self.newAccessString.get() == "Yes":
 			self.newAccess = True
-		if self.newAdminString == "Yes":
+		if self.newAdminString.get() == "Yes":
 			self.newAdmin = True
 		self.show_frame(enrollFace)
 
+	def enrollFace(self):
+		#Face enrollment code goes here
+		self.show_frame(enrollVoice)
+
 	def faceAuth(self):
-		#Run Facial Recognition (including image capture)
-		print "Face Stuff"
-		successful=fr.Authenticate()
+		#Facial Recognition
+		successful=fr.Authenticate() #Add id
 		print successful
-		self.show_frame(voiceCapture)
+		if successful:
+			#TODO Save id
+			self.show_frame(voiceCapture)
+		else
+			#Reset all variables
+			self.show_frame(failure)
 
 	def voiceAuth(self):
-		#Run speaker Recognition (including voice capture)
 		print "voice stuff"
-		self.show_frame(success)
-	
-	def enroll(self):
-		self.show_frame(enroll)	
+		#TODO Run speaker Recognition (including voice capture)
+		success = False
+		if success
+			self.show_frame(success)
+		else
+			self.show_frame(failure)
 
 	def unlock(self):
 		print "Send Unlock Signal"
@@ -97,7 +105,7 @@ class enrollFace(tk.Frame):
 		tk.Frame.__init__(self,parent)
 		label = tk.Label(self, text= "Enrollment Face Caputre")
 		label.pack()
-		button = tk.Button(self, text = "Capture Facial Data", command=controller.faceAuth)
+		button = tk.Button(self, text = "Capture Facial Data", command=controller.faceEnroll)
 		button.pack()
 
 class enrollVoice(tk.Frame):
@@ -136,7 +144,7 @@ class success(tk.Frame):
 		label.pack()
 		unlock = tk.Button(self, text= "Unlock System", command= controller.unlock)
 		unlock.pack()
-		enroll = tk.Button(self, text="Enroll new User", command= controller.enroll)
+		enroll = tk.Button(self, text="Enroll new User", command=lambda: controller.show_frame(enroll))
 		enroll.pack()
 
 
