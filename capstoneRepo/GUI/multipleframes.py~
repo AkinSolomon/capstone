@@ -10,6 +10,7 @@ import numpy as np
 class BioLock(tk.Tk):
 	def __init__(self, *args, **kwargs):
 		tk.Tk.__init__(self, *args, **kwargs)
+		self.attributes('-fullscreen',True)
 		container = tk.Frame(self)
 
 		container.pack(side="top", fill="both", expand = True)
