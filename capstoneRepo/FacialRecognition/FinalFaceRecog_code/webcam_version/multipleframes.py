@@ -26,7 +26,7 @@ class BioLock(tk.Tk):
 		self.newAccessString = None
 		self.newAdmin = False
 		self.newAdminString = None
-		self.newID = 0
+		self.newID = -1
 		self.newCode = None
 
 		# Initalize test variables
@@ -74,6 +74,9 @@ class BioLock(tk.Tk):
 		#self.newCode = train()
 
 		#Save data to dictionary and storage
+		self.adminDict[self.newID]=self.newAdmin
+		self.accessDict[self.newID]=self.newAccess
+		self.codeDict[self.newID]=self.newCode
 		self.show_frame(faceCapture)
 
 	def faceAuth(self):
@@ -82,6 +85,7 @@ class BioLock(tk.Tk):
 		successful = True
 		if successful:
 			#TODO Find code,admin,access
+			self.code = self.codeDict[self.id]
 			self.show_frame(voiceCapture)
 		else:
 			self.id = -1
@@ -89,11 +93,13 @@ class BioLock(tk.Tk):
 
 	def voiceAuth(self):
 		#TODO Run speaker Recognition (including voice capture)
+		#success = test(self.code)
 		success = True
 		if success:
+			self.admin = self.adminDict[self.id]
+			self.access = self.accessDict[self.id]
 			self.show_frame(success)
 		else:
-			self.access = False
 			self.admin = False
 			self.id = -1
 			self.code = None
