@@ -8,8 +8,46 @@
 import numpy as np
 import scipy.fftpack as fft
 import scipy.io.wavfile as wav
+import wave
+import pyaudio
+from scipy.io.wavfile import read
 
 import math
+
+import os,sys
+
+
+
+# Records audio signal to 
+def record_audio(record_seconds):
+	no_of_recordings=1
+	CHUNK = 1024
+	FORMAT = pyaudio.paInt16
+	CHANNELS = 1
+	RATE = 44100
+	filename= 's.wav'
+
+	p = pyaudio.PyAudio()
+        
+	stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE,input=True,frames_per_buffer=CHUNK)  
+	print("* recording")
+	frames = []
+        
+	for i in range(0, int(RATE / CHUNK * record_seconds)):
+		data = stream.read(CHUNK)
+		frames.append(data)         
+        
+	print("* done recording")
+	print('*******************************************')
+    
+    
+	wf = wave.open(filename, 'wb')
+	wf.setnchannels(CHANNELS)
+	wf.setsampwidth(p.get_sample_size(FORMAT))
+	wf.setframerate(RATE)
+	wf.writeframes(b''.join(frames))
+	wf.close()
+	return filename
 
 # DISTEU Pairwise Euclidean distances between columns of two matrices
 #
@@ -84,7 +122,7 @@ def vqlbg(d, k):
 			for j in range(0,m):
 				c[:, j] = np.mean(d[:, ind==j], axis=1);
 
-	return c;
+	return c
 
 # FROM https://github.com/jameslyons/python_speech_features/blob/master/features/base.py
 def get_filterbanks(nfilt=20,nfft=512,samplerate=16000,lowfreq=0,highfreq=None):
@@ -178,7 +216,7 @@ def mfcc(s, fs):
 	
 	return c
 	
-def train(trainfile):
+def train():
 # Speaker Recognition: Training Stage
 #
 # Input:
@@ -189,13 +227,14 @@ def train(trainfile):
 #
 
 	k = 8;                         # number of centroids required
-
-	[fs, s] = wav.read(trainfile)
+	record_audio(2)
+	[fs, s] = wav.read('s.wav')
+	#os.remove('s.wav')
 	s = toMono(s)
 	v = mfcc(s, fs)          # Compute MFCC's
 	return vqlbg(v, k)      # Train VQ codebook
 
-def test(testfile, code):
+def test(code):
 # Speaker Recognition: Testing Stage
 #
 # Input:
@@ -207,7 +246,9 @@ def test(testfile, code):
 
 	Dmax = 40;
 
-	[fs, s] = wav.read(testfile)  
+	filename = record_audio(2)
+	[fs, s] = wav.read(filename)
+	#os.remove('s.wav')  
 	s = toMono(s)
 	v = mfcc(s, fs)           # Compute MFCC's
    
@@ -216,9 +257,11 @@ def test(testfile, code):
 	for l in range(0,len(code)):    # each trained codebook, compute distortion
 		d = disteu(v, code); 
 		dist = sum(np.amin(d,axis=1)) / d.shape[0]
-      
+
 		if dist < distmin:
 			distmin = dist;
+
+	print distmin
 
 	if distmin<Dmax:
 		return True
