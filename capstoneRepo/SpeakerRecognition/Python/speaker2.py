@@ -4,7 +4,7 @@
 # http://minhdo.ece.illinois.edu/teaching/speaker_recognition/
 # Text independent speaker recognition system based on mel frequency coeffiecient
 # features and vector quantization
-
+import array
 import numpy as np
 import scipy.fftpack as fft
 import scipy.io.wavfile as wav
@@ -17,37 +17,34 @@ import math
 import os,sys
 
 
-
 # Records audio signal to 
 def record_audio(record_seconds):
 	no_of_recordings=1
-	CHUNK = 1024
+	CHUNK = 512
+	INPUT_CHANNELS = 2
 	FORMAT = pyaudio.paInt16
 	CHANNELS = 1
-	RATE = 44100
+	RATE = 48000
 	filename= 's.wav'
 
 	p = pyaudio.PyAudio()
         
-	stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE,input=True,frames_per_buffer=CHUNK)  
+	stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE,input=INPUT_CHANNELS,frames_per_buffer=CHUNK)  
 	print("* recording")
-	frames = []
-        
+        data=array.array('h')
 	for i in range(0, int(RATE / CHUNK * record_seconds)):
-		data = stream.read(CHUNK)
-		frames.append(data)         
+		data.fromstring(stream.read(CHUNK))   
         
 	print("* done recording")
 	print('*******************************************')
     
-    
-	wf = wave.open(filename, 'wb')
-	wf.setnchannels(CHANNELS)
-	wf.setsampwidth(p.get_sample_size(FORMAT))
-	wf.setframerate(RATE)
-	wf.writeframes(b''.join(frames))
-	wf.close()
-	return filename
+	stream.stop_stream()
+	stream.close()
+	p.terminate()
+
+	d = np.array(data,dtype='i')
+	print d.size    
+	return (d,RATE)
 
 # DISTEU Pairwise Euclidean distances between columns of two matrices
 #
@@ -227,9 +224,9 @@ def train():
 #
 
 	k = 8;                         # number of centroids required
-	record_audio(2)
-	[fs, s] = wav.read('s.wav')
-	#os.remove('s.wav')
+	[s,fs]= record_audio(2)
+	
+	
 	s = toMono(s)
 	v = mfcc(s, fs)          # Compute MFCC's
 	return vqlbg(v, k)      # Train VQ codebook
@@ -246,9 +243,8 @@ def test(code):
 
 	Dmax = 40;
 
-	filename = record_audio(2)
-	[fs, s] = wav.read(filename)
-	#os.remove('s.wav')  
+	[s,fs] = record_audio(2)
+	  
 	s = toMono(s)
 	v = mfcc(s, fs)           # Compute MFCC's
    
