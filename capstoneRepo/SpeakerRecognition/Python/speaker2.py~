@@ -87,7 +87,7 @@ def disteu(x, y):
 #       c contains the result VQ codebook (k columns, one for each centroids)
 def vqlbg(d, k):
 	# Constants
-	split = 0.01;
+	split = 0.1;
 	sigma = 0.001;
 
 	#Initial Codebook of one entry contains single centroid
