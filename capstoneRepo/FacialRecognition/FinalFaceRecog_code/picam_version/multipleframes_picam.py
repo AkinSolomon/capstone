@@ -31,12 +31,12 @@ class BioLock(tk.Tk):
 		tk.Tk.__init__(self, *args, **kwargs)
 		# self.attributes('-fullscreen',True)
 		container = tk.Frame(self)
-
+		
 		container.pack(side="top", fill="both", expand=True)
 
 		container.grid_rowconfigure(0, weight=3)
 		container.grid_columnconfigure(0, weight=3)
-
+		
 		newcontainer=tk.Frame(self)
 		newcontainer.pack(side="bottom",fill="both",expand=True)
 		container.grid_rowconfigure(1, weight=7)
@@ -49,10 +49,23 @@ class BioLock(tk.Tk):
 		sys.stdout = TextRedirector(self.text, "stdout")
 		sys.stderr = TextRedirector(self.text, "stderr")
 
-		# TODO Initialize user dictionary (either load from file or start empty one)
+		############# Here
+
 		self.adminDict = {}
 		self.accessDict = {}
 		self.codeDict = {}
+		tree = ET.parse('voicedata.xml')
+		root = tree.getroot()
+		for child in root:
+			idString = child.tag
+			ID = int(idString[1:len(idString)])
+			print ID
+			self.adminDict[ID] = child.get("admin")
+			self.accessDict[ID] = child.get("access")
+			self.codeDict[ID] = np.load('Arrays/{}.npy'.format(ID))
+
+		############## To here
+
 
 		# Initalize new user variables
 		self.newAccess = False
@@ -71,13 +84,22 @@ class BioLock(tk.Tk):
 		# Initialize Frames
 		self.frames = {}
 
-		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure]:
+		
+		#######Copy this
+
+		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim]:
 			frame = f(container, self)
 			self.frames[f] = frame
 			frame.grid(row=0, column=0, sticky="nsew")
 
-		# TODO will depend on intial conditions
-		self.show_frame(enroll)
+
+
+		if len(self.codeDict) == 0:
+			self.show_frame(enrollDisclaim)
+		else:
+			self.show_frame(authDisclaim)
+
+		#######	To here
 
 	# Brings specified frame to front of app
 	def show_frame(self, cont):
@@ -108,7 +130,14 @@ class BioLock(tk.Tk):
 		self.adminDict[self.newID] = self.newAdmin
 		self.accessDict[self.newID] = self.newAccess
 		self.codeDict[self.newID] = self.newCode
-		self.show_frame(faceCapture)
+		self.show_frame(authDisclaim)
+		np.save('Arrays/{}'.format(self.newID),self.newCode)
+		tree = ET.parse('voicedata.xml')
+		root = tree.getroot()
+		element = ET.SubElement(root,'s'+str(self.newID),admin=str(self.newAdmin),access=str(self.newAccess))
+		tree.write('voicedata.xml')
+		
+
 
 	def faceAuth(self):
 		# Facial Recognition
@@ -163,17 +192,44 @@ class BioLock(tk.Tk):
 		self.admin = False
 		self.id = -1
 		self.code = None
-		self.show_frame(faceCapture)
+		self.show_frame(authDisclaim)
 	
 	def newUser(self):
 		if self.admin:
-			self.show_frame(enroll)
+			self.show_frame(enrollDisclaim)
 
+	def startEnroll(self):
+		self.show_frame(enroll)
 
-#TODO figure out option menu
+	def startAuth(self):
+		self.show_frame(faceCapture)
+
+#
+# Frames
+#
+
+class enrollDisclaim(tk.Frame):
+	def __init__(self,parent,controller):
+		tk.Frame.__init__(self,parent)
+		label = tk.Label(self, text="Enrollment Disclaimer")
+		label.pack()
+		disclaimer = tk.Label(self, text="This program will collect your biometric information, including a photo of your face as well as your voice. Using this device conveys your acceptance of these terms. Tap OK to continue.")
+		disclaimer.pack()
+		button = tk.Button(self, text='OK', command=controller.startEnroll)
+		button.pack()
+
+class authDisclaim(tk.Frame):
+	def __init__(self,parent,controller):
+		tk.Frame.__init__(self,parent)
+		label = tk.Label(self, text="Disclaimer")
+		label.pack()
+		disclaimer = tk.Label(self, text="This program will collect your biometric information, including a photo of your face as well as your voice. Using this device conveys your acceptance of these terms. Tap OK to continue.")
+		disclaimer.pack()
+		button = tk.Button(self, text='OK', command=controller.startAuth)
+		button.pack()
+
 class enroll(tk.Frame):
 	def __init__(self,parent,controller):
-		self.controller = controller
 		tk.Frame.__init__(self,parent)
 		#controller.newAccessString = tk.StringVar(controller)
 		#controller.newAccessString.set("Yes")
@@ -287,7 +343,6 @@ class failure(tk.Frame):
 		label.pack()
 		button = tk.Button(self, text = "OK", command=lambda: controller.show_frame(faceCapture))
 		button.pack()
-
 class FaceRecognizer(object):
 	# ------------------------------------------------------------------------------------TESTING MAIN
 
