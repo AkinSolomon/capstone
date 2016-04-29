@@ -352,9 +352,9 @@ class failure(tk.Frame):
 		label.pack()
 		button = tk.Button(self, text = "OK", command=lambda: controller.show_frame(faceCapture))
 		button.pack()
-class FaceRecognizer(object):
-	# ------------------------------------------------------------------------------------TESTING MAIN
 
+
+class FaceRecognizer(object):
 	@classmethod
 	def walk_files(cls,directory, match='*'):
 		"""Generator function to iterate through all files in a directory recursively
