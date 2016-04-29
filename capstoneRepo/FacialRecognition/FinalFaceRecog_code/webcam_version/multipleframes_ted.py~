@@ -2,7 +2,6 @@ import Tkinter as tk
 import numpy as np
 import sys
 import os.path
-import csv
 
 import fnmatch
 import cv2
@@ -105,12 +104,7 @@ class BioLock(tk.Tk):
 		self.adminDict[self.newID] = self.newAdmin
 		self.accessDict[self.newID] = self.newAccess
 		self.codeDict[self.newID] = self.newCode
-		self.show_frame(authDisclaimer)
-		np.save('Arrays/{}'.format(self.newID),self.newCode)
-		f = csv.open('voicedata.csv','a')
-		
-		
-		
+		self.show_frame(faceCapture)
 
 	def faceAuth(self):
 		# Facial Recognition
@@ -165,40 +159,17 @@ class BioLock(tk.Tk):
 		self.admin = False
 		self.id = -1
 		self.code = None
-		self.show_frame(authDisclaim)
+		self.show_frame(faceCapture)
 	
 	def newUser(self):
 		if self.admin:
-			self.show_frame(enrollDisclaim)
+			self.show_frame(enroll)
 
-	def startEnroll(self):
-		self.show_frame(enroll)
 
-	def startAuth(self):
-		self.show_frame(faceCapture)
-
-#
-# Frames
-#
-
-class enrollDisclaim(tk.Frame):
-	def __init__(self,parent,controller):
-		tk.Frame.__init__(self,parent)
-		label = tk.Label(self, text="Disclaimer")
-		label.pack()
-		disclaimer = tk.Label(self, text="This program will collect your biometric information, including a photo of your face as well as your voice. Using this device conveys your acceptance of these terms. Tap OK to continue.")
-		button = tk.Button(self, text='OK', command=controller.startEnroll)
-
-class authDisclaim(tk.Frame):
-	def __init__(self,parent,controller):
-		tk.Frame.__init__(self,parent)
-		label = tk.Label(self, text="Disclaimer")
-		label.pack()
-		disclaimer = tk.Label(self, text="This program will collect your biometric information, including a photo of your face as well as your voice. Using this device conveys your acceptance of these terms. Tap OK to continue.")
-		button = tk.Button(self, text='OK', command=controller.startEnroll)
-
+#TODO figure out option menu
 class enroll(tk.Frame):
 	def __init__(self,parent,controller):
+		self.controller = controller
 		tk.Frame.__init__(self,parent)
 		#controller.newAccessString = tk.StringVar(controller)
 		#controller.newAccessString.set("Yes")
