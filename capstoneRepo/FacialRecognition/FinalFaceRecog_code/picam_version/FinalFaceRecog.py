@@ -402,15 +402,15 @@ def Authenticate():
 
 if __name__ == '__main__':
 	#------------run this first to train the system
-	#create_csv()
-	#trainLBPH()
+	create_csv()
+	trainLBPH()
 
 	#------------enroll new user
-	#name="kaylee YE"
+	#name="Akin"
 	#LBPHupdate(name)
 
 	#------------authenticate
-	successful,label = Authenticate()
-	print successful
-	print label
+	#successful,label = Authenticate()
+	#print successful
+	#print label
 	
