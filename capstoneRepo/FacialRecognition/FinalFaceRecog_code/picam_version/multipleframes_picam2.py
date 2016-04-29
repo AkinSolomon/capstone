@@ -2,6 +2,7 @@ import Tkinter as tk
 import numpy as np
 import sys
 import os.path
+import xml.etree.ElementTree as ET
 
 import fnmatch
 import cv2
@@ -257,6 +258,11 @@ class enroll(tk.Frame):
 		cancel = tk.Button(self,text= "Cancel", command=controller.cancel)
 		cancel.pack()
 
+		create = tk.Button(self,text="Create CSV",command=FaceRecognizer.create_csv)
+		create.pack(side="left")
+		train = tk.Button(self,text="Load in Database",command=FaceRecognizer.trainLBPH)
+		train.pack(side="left")
+
 class enrollFace(tk.Frame):
 	def __init__(self, parent, controller):
 		self.controller = controller
@@ -504,7 +510,7 @@ class FaceRecognizer(object):
 		rawCapture=PiRGBArray(camera,size=(320,240))
 		time.sleep(3)
 
-		cv2.namedWindow("preview")
+		cv2.namedWindow("Preview")
 		camera.capture(rawCapture,format="bgr",use_video_port=True)
 		while rawCapture is not None and counter<30:
 			image=rawCapture.array
