@@ -88,7 +88,7 @@ class BioLock(tk.Tk):
 		
 		#######Copy this
 
-		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim,success_notAdmin]:
+		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim,success_notAdmin,facecap]:
 			frame = f(container, self)
 			self.frames[f] = frame
 			frame.grid(row=0, column=0, sticky="nsew")
@@ -115,8 +115,13 @@ class BioLock(tk.Tk):
 
 		self.show_frame(enrollFace)
 
+	def facecap(self):
+		name="Test"
+		FaceRecognizer.ImageCapture(name)
+		self.show_frame(enrollFace)
+
 	def enroll(self):
-		name = "Kaylee Ye"
+		name = "Test"
 
 		self.newID = FaceRecognizer.LBPHupdate(name)
 		print self.newID
@@ -137,8 +142,6 @@ class BioLock(tk.Tk):
 		root = tree.getroot()
 		element = ET.SubElement(root,'s'+str(self.newID),admin=str(self.newAdmin),access=str(self.newAccess))
 		tree.write('voicedata.xml')
-		
-
 
 	def faceAuth(self):
 		# Facial Recognition
@@ -266,10 +269,11 @@ class enroll(tk.Frame):
 		train = tk.Button(self,text="Load in Database",command=FaceRecognizer.trainLBPH)
 		train.pack(side="left")
 
-class enrollFace(tk.Frame):
-	def __init__(self, parent, controller):
-		self.controller = controller
-		tk.Frame.__init__(self, parent)
+
+class captureImage(tk.Tk):
+	def __init__(self,parent,controller):
+		self.controller=controller
+		tk.Frame.__init__(self,parent)
 
 		label = tk.Label(self, text="Enrollment Face Capture")
 		label.pack()
@@ -278,6 +282,25 @@ class enrollFace(tk.Frame):
 		toolbar.pack(side="top",fill="x")
 		button = tk.Button(self, text="Capture Facial Data", command=controller.enroll)
 		button.pack(in_=toolbar,side="left")
+
+
+class enrollFace(tk.Frame):
+	def __init__(self, parent, controller):
+		self.controller = controller
+		tk.Frame.__init__(self, parent)
+
+		label = tk.Label(self, text="Enrollment Face Capture")
+		label.pack()
+
+		label_quesion=tk.Label(self,text="Do you want to re-capture your images?")
+		label.pack(side="left")
+
+		toolbar=tk.Frame(self)
+		toolbar.pack(side="top",fill="x")
+		button_y = tk.Button(self, text="Yes", command=controller.facecap)
+		button_y.pack(in_=toolbar,side="left")
+		button_n = tk.Button(self, text="No", command=controller.enroll)
+		button_n.pack(in_=toolbar,side="left")
 
 
 
@@ -490,7 +513,7 @@ class FaceRecognizer(object):
 
 	#-------------------------------------------------------------------------------------Enroll and update
 	@classmethod
-	def LBPHupdate(cls,ID):
+	def ImageCapture(cls,ID):
 		labels=[]
 		images=[]
 		# make sure this is the right file name
@@ -537,6 +560,11 @@ class FaceRecognizer(object):
 		    	
 		camera.close()
 		cv2.destroyWindow("Preview")
+
+
+	@classmethod
+	def LBPHupdate(cls,ID):
+		foldername=ID
 
 
 		#update database
