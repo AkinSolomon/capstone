@@ -9,6 +9,10 @@ import numpy as np
 
 import face
 import shutil
+<<<<<<< HEAD
+import speaker
+=======
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 #import FinalFaceRecog as fr
 
 TRAINING_FILE='train_LBPH.xml'
@@ -18,8 +22,11 @@ LOOKUP_FILE='lookup_table.txt'
 ENROLLMENT_FILE='enrollment.txt'
 CSV_FILE='CSV.txt'
 
+<<<<<<< HEAD
+=======
 #TODO from speaker import test,train
 #TODO from face import test,train
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 
 class BioLock(tk.Tk):
 	def __init__(self, *args, **kwargs):
@@ -84,21 +91,33 @@ class BioLock(tk.Tk):
 			self.newAccess = True
 		if admin.get() == "Yes":
 			self.newAdmin = True
+<<<<<<< HEAD
+=======
 		print access.get()
 		print admin.get()
 		print self.newAccess
 		print self.newAdmin
 		#self.show_frame(enrollFace)
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 		self.show_frame(enrollFace)
 
 	def enroll(self):
 		name = "Kaylee Ye"
+<<<<<<< HEAD
+		self.newID = FaceRecognizer.LBPHupdate(name)
+		print self.newID
+=======
 		FaceRecognizer.LBPHupdate(name)
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 		self.show_frame(enrollVoice)
 
 	def enrollVoice(self):
 		# Voice enrollment code goes here
+<<<<<<< HEAD
+		self.newCode = speaker.train()
+=======
 		# self.newCode = train()
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 
 		# Save data to dictionary and storage
 		self.adminDict[self.newID] = self.newAdmin
@@ -111,8 +130,14 @@ class BioLock(tk.Tk):
 		# successful=fr.Authenticate() #Add id
 		successful,label = FaceRecognizer.Authenticate()
 		self.id=label
+<<<<<<< HEAD
+		print successful
+		print label
+		if successful == 1 and self.id in self.codeDict:
+=======
 		if successful == 1:
 			# TODO Find code,admin,access
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 			self.code = self.codeDict[self.id]
 			self.show_frame(voiceCapture)
 		else:
@@ -120,6 +145,20 @@ class BioLock(tk.Tk):
 			self.show_frame(failure)
 
 	def voiceAuth(self):
+<<<<<<< HEAD
+		# Run speaker Recognition (including voice capture)
+		successful = speaker.test(self.code)
+		if successful:
+			self.admin = self.adminDict[self.id]
+			self.access = self.accessDict[self.id]
+			if self.access:
+				self.show_frame(success)
+			else
+				self.admin = False
+				self.id = -1
+				self.code = None
+				self.show_frame(failure)
+=======
 		# TODO Run speaker Recognition (including voice capture)
 		# success = test(self.code)
 		success = True
@@ -127,6 +166,7 @@ class BioLock(tk.Tk):
 			self.admin = self.adminDict[self.id]
 			self.access = self.accessDict[self.id]
 			self.show_frame(success)
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 		else:
 			self.admin = False
 			self.id = -1
@@ -153,6 +193,13 @@ class BioLock(tk.Tk):
 		self.id = -1
 		self.code = None
 		self.show_frame(faceCapture)
+<<<<<<< HEAD
+	
+	def newUser(self):
+		if self.admin:
+			self.show_frame(enroll)
+=======
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 
 
 #TODO figure out option menu
@@ -190,7 +237,11 @@ class enrollFace(tk.Frame):
 	def __init__(self, parent, controller):
 		self.controller = controller
 		tk.Frame.__init__(self, parent)
+<<<<<<< HEAD
+		label = tk.Label(self, text="Enrollment Face Capture")
+=======
 		label = tk.Label(self, text="Enrollment Face Caputre")
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 		label.pack()
 
 		toolbar=tk.Frame(self)
@@ -258,7 +309,11 @@ class success(tk.Frame):
 		label.pack()
 		unlock = tk.Button(self, text= "Unlock System", command= controller.unlock)
 		unlock.pack()
+<<<<<<< HEAD
+		enroll = tk.Button(self, text="Enroll new User", command=controller.newUser)
+=======
 		enroll = tk.Button(self, text="Enroll new User", command=lambda: controller.show_frame(enroll))
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 		enroll.pack()
 
 
@@ -419,7 +474,11 @@ class FaceRecognizer(object):
 		faceCascade = cv2.CascadeClassifier(cascadePath)
 
 		cv2.namedWindow("preview")
+<<<<<<< HEAD
+		vc = cv2.VideoCapture(0) # device ID may not be 0
+=======
 		vc = cv2.VideoCapture(1) # device ID may not be 0
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 		counter=0
 		#counter2=0
 		foldername=ID;
@@ -536,6 +595,10 @@ class FaceRecognizer(object):
 		print "successfully updated"
 
 		shutil.rmtree(foldername)
+<<<<<<< HEAD
+		return label
+=======
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 
 	#------------------------------------------------------------------------------------------
 	@classmethod
@@ -559,7 +622,11 @@ class FaceRecognizer(object):
 		confidences=[]
 		labels=[]
 
+<<<<<<< HEAD
+		vc = cv2.VideoCapture(0)
+=======
 		vc = cv2.VideoCapture(1)
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 		print 'Looking for face...'
 		if vc.isOpened(): # try to get the first frame
 			rval, frame = vc.read()
@@ -665,7 +732,11 @@ class FaceRecognizer(object):
 				print "flag TRUE"
 				break
 			s=f.readline()
+<<<<<<< HEAD
+		if ave < 52 and flag==1:
+=======
 		if ave < 50 and flag==1:
+>>>>>>> 51cb991d2810400666b21076fe81a908c2b31d62
 			print "authenticated"
 			return 1,element
 		else:
