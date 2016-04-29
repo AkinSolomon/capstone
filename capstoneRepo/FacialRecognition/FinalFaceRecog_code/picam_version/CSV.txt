@@ -1046,470 +1046,461 @@ training/negative/s25\8.pgm;60
 training/negative/s25\7.pgm;60
 training/negative/s25\1.pgm;60
 training/negative/s25\2.pgm;60
-training/negative/s82\9.pgm;61
-training/negative/s82\3.pgm;61
-training/negative/s82\4.pgm;61
-training/negative/s82\6.pgm;61
-training/negative/s82\5.pgm;61
-training/negative/s82\10.pgm;61
-training/negative/s82\8.pgm;61
-training/negative/s82\7.pgm;61
-training/negative/s82\1.pgm;61
-training/negative/s64\W-004-08.pgm;62
-training/negative/s64\W-004-06.pgm;62
-training/negative/s64\W-004-23.pgm;62
-training/negative/s64\W-004-26.pgm;62
-training/negative/s64\W-004-11.pgm;62
-training/negative/s64\W-004-03.pgm;62
-training/negative/s64\W-004-21.pgm;62
-training/negative/s64\W-004-17.pgm;62
-training/negative/s64\W-004-24.pgm;62
-training/negative/s64\W-004-12.pgm;62
-training/negative/s64\W-004-15.pgm;62
-training/negative/s64\W-004-14.pgm;62
-training/negative/s64\W-004-25.pgm;62
-training/negative/s64\W-004-10.pgm;62
-training/negative/s64\W-004-20.pgm;62
-training/negative/s64\W-004-19.pgm;62
-training/negative/s64\W-004-09.pgm;62
-training/negative/s64\W-004-13.pgm;62
-training/negative/s64\W-004-04.pgm;62
-training/negative/s64\W-004-05.pgm;62
-training/negative/s64\W-004-22.pgm;62
-training/negative/s64\W-004-07.pgm;62
-training/negative/s64\W-004-02.pgm;62
-training/negative/s64\W-004-18.pgm;62
-training/negative/s64\W-004-01.pgm;62
-training/negative/s64\W-004-16.pgm;62
-training/negative/s80\W-020-17.pgm;63
-training/negative/s80\W-020-03.pgm;63
-training/negative/s80\W-020-18.pgm;63
-training/negative/s80\W-020-16.pgm;63
-training/negative/s80\W-020-12.pgm;63
-training/negative/s80\W-020-10.pgm;63
-training/negative/s80\W-020-26.pgm;63
-training/negative/s80\W-020-19.pgm;63
-training/negative/s80\W-020-25.pgm;63
-training/negative/s80\W-020-08.pgm;63
-training/negative/s80\W-020-22.pgm;63
-training/negative/s80\W-020-21.pgm;63
-training/negative/s80\W-020-02.pgm;63
-training/negative/s80\W-020-20.pgm;63
-training/negative/s80\W-020-24.pgm;63
-training/negative/s80\W-020-05.pgm;63
-training/negative/s80\W-020-01.pgm;63
-training/negative/s80\W-020-04.pgm;63
-training/negative/s80\W-020-07.pgm;63
-training/negative/s80\W-020-11.pgm;63
-training/negative/s80\W-020-14.pgm;63
-training/negative/s80\W-020-13.pgm;63
-training/negative/s80\W-020-06.pgm;63
-training/negative/s80\W-020-15.pgm;63
-training/negative/s80\W-020-09.pgm;63
-training/negative/s80\W-020-23.pgm;63
-training/negative/s62\W-002-23.pgm;64
-training/negative/s62\W-002-16.pgm;64
-training/negative/s62\W-002-25.pgm;64
-training/negative/s62\W-002-13.pgm;64
-training/negative/s62\W-002-04.pgm;64
-training/negative/s62\W-002-07.pgm;64
-training/negative/s62\W-002-26.pgm;64
-training/negative/s62\W-002-05.pgm;64
-training/negative/s62\W-002-06.pgm;64
-training/negative/s62\W-002-02.pgm;64
-training/negative/s62\W-002-24.pgm;64
-training/negative/s62\W-002-12.pgm;64
-training/negative/s62\W-002-15.pgm;64
-training/negative/s62\W-002-10.pgm;64
-training/negative/s62\W-002-01.pgm;64
-training/negative/s62\W-002-19.pgm;64
-training/negative/s62\W-002-14.pgm;64
-training/negative/s62\W-002-17.pgm;64
-training/negative/s62\W-002-09.pgm;64
-training/negative/s62\W-002-21.pgm;64
-training/negative/s62\W-002-18.pgm;64
-training/negative/s62\W-002-03.pgm;64
-training/negative/s62\W-002-20.pgm;64
-training/negative/s62\W-002-11.pgm;64
-training/negative/s62\W-002-22.pgm;64
-training/negative/s62\W-002-08.pgm;64
-training/negative/s78\W-018-08.pgm;65
-training/negative/s78\W-018-05.pgm;65
-training/negative/s78\W-018-02.pgm;65
-training/negative/s78\W-018-12.pgm;65
-training/negative/s78\W-018-22.pgm;65
-training/negative/s78\W-018-21.pgm;65
-training/negative/s78\W-018-24.pgm;65
-training/negative/s78\W-018-13.pgm;65
-training/negative/s78\W-018-26.pgm;65
-training/negative/s78\W-018-17.pgm;65
-training/negative/s78\W-018-23.pgm;65
-training/negative/s78\W-018-04.pgm;65
-training/negative/s78\W-018-01.pgm;65
-training/negative/s78\W-018-11.pgm;65
-training/negative/s78\W-018-16.pgm;65
-training/negative/s78\W-018-14.pgm;65
-training/negative/s78\W-018-19.pgm;65
-training/negative/s78\W-018-25.pgm;65
-training/negative/s78\W-018-20.pgm;65
-training/negative/s78\W-018-06.pgm;65
-training/negative/s78\W-018-18.pgm;65
-training/negative/s78\W-018-03.pgm;65
-training/negative/s78\W-018-07.pgm;65
-training/negative/s78\W-018-10.pgm;65
-training/negative/s78\W-018-15.pgm;65
-training/negative/s78\W-018-09.pgm;65
-training/negative/s72\W-012-16.pgm;66
-training/negative/s72\W-012-04.pgm;66
-training/negative/s72\W-012-19.pgm;66
-training/negative/s72\W-012-12.pgm;66
-training/negative/s72\W-012-08.pgm;66
-training/negative/s72\W-012-10.pgm;66
-training/negative/s72\W-012-17.pgm;66
-training/negative/s72\W-012-18.pgm;66
-training/negative/s72\W-012-25.pgm;66
-training/negative/s72\W-012-03.pgm;66
-training/negative/s72\W-012-05.pgm;66
-training/negative/s72\W-012-07.pgm;66
-training/negative/s72\W-012-20.pgm;66
-training/negative/s72\W-012-14.pgm;66
-training/negative/s72\W-012-23.pgm;66
-training/negative/s72\W-012-26.pgm;66
-training/negative/s72\W-012-06.pgm;66
-training/negative/s72\W-012-02.pgm;66
-training/negative/s72\W-012-21.pgm;66
-training/negative/s72\W-012-22.pgm;66
-training/negative/s72\W-012-13.pgm;66
-training/negative/s72\W-012-15.pgm;66
-training/negative/s72\W-012-11.pgm;66
-training/negative/s72\W-012-09.pgm;66
-training/negative/s72\W-012-01.pgm;66
-training/negative/s72\W-012-24.pgm;66
-training/negative/s55\M-015-25.pgm;67
-training/negative/s55\M-015-01.pgm;67
-training/negative/s55\M-015-16.pgm;67
-training/negative/s55\M-015-10.pgm;67
-training/negative/s55\M-015-04.pgm;67
-training/negative/s55\M-015-14.pgm;67
-training/negative/s55\M-015-08.pgm;67
-training/negative/s55\M-015-15.pgm;67
-training/negative/s55\M-015-13.pgm;67
-training/negative/s55\M-015-23.pgm;67
-training/negative/s55\M-015-17.pgm;67
-training/negative/s55\M-015-02.pgm;67
-training/negative/s55\M-015-22.pgm;67
-training/negative/s55\M-015-03.pgm;67
-training/negative/s55\M-015-09.pgm;67
-training/negative/s55\M-015-12.pgm;67
-training/negative/s55\M-015-20.pgm;67
-training/negative/s55\M-015-26.pgm;67
-training/negative/s55\M-015-06.pgm;67
-training/negative/s55\M-015-24.pgm;67
-training/negative/s55\M-015-07.pgm;67
-training/negative/s55\M-015-18.pgm;67
-training/negative/s55\M-015-19.pgm;67
-training/negative/s55\M-015-11.pgm;67
-training/negative/s55\M-015-05.pgm;67
-training/negative/s55\M-015-21.pgm;67
-training/negative/s45\M-005-18.pgm;68
-training/negative/s45\M-005-20.pgm;68
-training/negative/s45\M-005-02.pgm;68
-training/negative/s45\M-005-25.pgm;68
-training/negative/s45\M-005-07.pgm;68
-training/negative/s45\M-005-26.pgm;68
-training/negative/s45\M-005-01.pgm;68
-training/negative/s45\M-005-06.pgm;68
-training/negative/s45\M-005-03.pgm;68
-training/negative/s45\M-005-17.pgm;68
-training/negative/s45\M-005-23.pgm;68
-training/negative/s45\M-005-04.pgm;68
-training/negative/s45\M-005-24.pgm;68
-training/negative/s45\M-005-14.pgm;68
-training/negative/s45\M-005-08.pgm;68
-training/negative/s45\M-005-09.pgm;68
-training/negative/s45\M-005-12.pgm;68
-training/negative/s45\M-005-19.pgm;68
-training/negative/s45\M-005-22.pgm;68
-training/negative/s45\M-005-16.pgm;68
-training/negative/s45\M-005-05.pgm;68
-training/negative/s45\M-005-15.pgm;68
-training/negative/s45\M-005-10.pgm;68
-training/negative/s45\M-005-13.pgm;68
-training/negative/s45\M-005-21.pgm;68
-training/negative/s45\M-005-11.pgm;68
-training/negative/s63\W-003-03.pgm;69
-training/negative/s63\W-003-23.pgm;69
-training/negative/s63\W-003-16.pgm;69
-training/negative/s63\W-003-02.pgm;69
-training/negative/s63\W-003-01.pgm;69
-training/negative/s63\W-003-18.pgm;69
-training/negative/s63\W-003-20.pgm;69
-training/negative/s63\W-003-14.pgm;69
-training/negative/s63\W-003-13.pgm;69
-training/negative/s63\W-003-08.pgm;69
-training/negative/s63\W-003-09.pgm;69
-training/negative/s63\W-003-26.pgm;69
-training/negative/s63\W-003-04.pgm;69
-training/negative/s63\W-003-22.pgm;69
-training/negative/s63\W-003-17.pgm;69
-training/negative/s63\W-003-25.pgm;69
-training/negative/s63\W-003-15.pgm;69
-training/negative/s63\W-003-10.pgm;69
-training/negative/s63\W-003-12.pgm;69
-training/negative/s63\W-003-11.pgm;69
-training/negative/s63\W-003-24.pgm;69
-training/negative/s63\W-003-21.pgm;69
-training/negative/s63\W-003-06.pgm;69
-training/negative/s63\W-003-05.pgm;69
-training/negative/s63\W-003-07.pgm;69
-training/negative/s63\W-003-19.pgm;69
-training/negative/s19\9.pgm;70
-training/negative/s19\3.pgm;70
-training/negative/s19\4.pgm;70
-training/negative/s19\6.pgm;70
-training/negative/s19\5.pgm;70
-training/negative/s19\10.pgm;70
-training/negative/s19\8.pgm;70
-training/negative/s19\7.pgm;70
-training/negative/s19\1.pgm;70
-training/negative/s19\2.pgm;70
-training/negative/s3\9.pgm;71
-training/negative/s3\3.pgm;71
-training/negative/s3\4.pgm;71
-training/negative/s3\6.pgm;71
-training/negative/s3\5.pgm;71
-training/negative/s3\10.pgm;71
-training/negative/s3\8.pgm;71
-training/negative/s3\7.pgm;71
-training/negative/s3\1.pgm;71
-training/negative/s3\2.pgm;71
-training/negative/s23\9.pgm;72
-training/negative/s23\3.pgm;72
-training/negative/s23\4.pgm;72
-training/negative/s23\6.pgm;72
-training/negative/s23\5.pgm;72
-training/negative/s23\10.pgm;72
-training/negative/s23\8.pgm;72
-training/negative/s23\7.pgm;72
-training/negative/s23\1.pgm;72
-training/negative/s23\2.pgm;72
-training/negative/s73\W-013-23.pgm;73
-training/negative/s73\W-013-26.pgm;73
-training/negative/s73\W-013-02.pgm;73
-training/negative/s73\W-013-20.pgm;73
-training/negative/s73\W-013-13.pgm;73
-training/negative/s73\W-013-22.pgm;73
-training/negative/s73\W-013-06.pgm;73
-training/negative/s73\W-013-10.pgm;73
-training/negative/s73\W-013-03.pgm;73
-training/negative/s73\W-013-05.pgm;73
-training/negative/s73\W-013-01.pgm;73
-training/negative/s73\W-013-15.pgm;73
-training/negative/s73\W-013-04.pgm;73
-training/negative/s73\W-013-25.pgm;73
-training/negative/s73\W-013-14.pgm;73
-training/negative/s73\W-013-21.pgm;73
-training/negative/s73\W-013-24.pgm;73
-training/negative/s73\W-013-12.pgm;73
-training/negative/s73\W-013-08.pgm;73
-training/negative/s73\W-013-17.pgm;73
-training/negative/s73\W-013-16.pgm;73
-training/negative/s73\W-013-07.pgm;73
-training/negative/s73\W-013-18.pgm;73
-training/negative/s73\W-013-11.pgm;73
-training/negative/s73\W-013-09.pgm;73
-training/negative/s73\W-013-19.pgm;73
-training/negative/s44\M-004-12.pgm;74
-training/negative/s44\M-004-07.pgm;74
-training/negative/s44\M-004-04.pgm;74
-training/negative/s44\M-004-23.pgm;74
-training/negative/s44\M-004-26.pgm;74
-training/negative/s44\M-004-17.pgm;74
-training/negative/s44\M-004-11.pgm;74
-training/negative/s44\M-004-20.pgm;74
-training/negative/s44\M-004-01.pgm;74
-training/negative/s44\M-004-09.pgm;74
-training/negative/s44\M-004-08.pgm;74
-training/negative/s44\M-004-24.pgm;74
-training/negative/s44\M-004-18.pgm;74
-training/negative/s44\M-004-05.pgm;74
-training/negative/s44\M-004-22.pgm;74
-training/negative/s44\M-004-16.pgm;74
-training/negative/s44\M-004-03.pgm;74
-training/negative/s44\M-004-15.pgm;74
-training/negative/s44\M-004-19.pgm;74
-training/negative/s44\M-004-21.pgm;74
-training/negative/s44\M-004-10.pgm;74
-training/negative/s44\M-004-06.pgm;74
-training/negative/s44\M-004-13.pgm;74
-training/negative/s44\M-004-14.pgm;74
-training/negative/s44\M-004-02.pgm;74
-training/negative/s44\M-004-25.pgm;74
-training/negative/s76\W-016-01.pgm;75
-training/negative/s76\W-016-15.pgm;75
-training/negative/s76\W-016-19.pgm;75
-training/negative/s76\W-016-10.pgm;75
-training/negative/s76\W-016-13.pgm;75
-training/negative/s76\W-016-17.pgm;75
-training/negative/s76\W-016-23.pgm;75
-training/negative/s76\W-016-26.pgm;75
-training/negative/s76\W-016-18.pgm;75
-training/negative/s76\W-016-16.pgm;75
-training/negative/s76\W-016-05.pgm;75
-training/negative/s76\W-016-08.pgm;75
-training/negative/s76\W-016-07.pgm;75
-training/negative/s76\W-016-14.pgm;75
-training/negative/s76\W-016-09.pgm;75
-training/negative/s76\W-016-02.pgm;75
-training/negative/s76\W-016-20.pgm;75
-training/negative/s76\W-016-04.pgm;75
-training/negative/s76\W-016-03.pgm;75
-training/negative/s76\W-016-11.pgm;75
-training/negative/s76\W-016-12.pgm;75
-training/negative/s76\W-016-25.pgm;75
-training/negative/s76\W-016-22.pgm;75
-training/negative/s76\W-016-21.pgm;75
-training/negative/s76\W-016-24.pgm;75
-training/negative/s76\W-016-06.pgm;75
-training/negative/s79\W-019-12.pgm;76
-training/negative/s79\W-019-15.pgm;76
-training/negative/s79\W-019-07.pgm;76
-training/negative/s79\W-019-22.pgm;76
-training/negative/s79\W-019-26.pgm;76
-training/negative/s79\W-019-06.pgm;76
-training/negative/s79\W-019-20.pgm;76
-training/negative/s79\W-019-17.pgm;76
-training/negative/s79\W-019-04.pgm;76
-training/negative/s79\W-019-25.pgm;76
-training/negative/s79\W-019-19.pgm;76
-training/negative/s79\W-019-21.pgm;76
-training/negative/s79\W-019-24.pgm;76
-training/negative/s79\W-019-13.pgm;76
-training/negative/s79\W-019-14.pgm;76
-training/negative/s79\W-019-09.pgm;76
-training/negative/s79\W-019-16.pgm;76
-training/negative/s79\W-019-08.pgm;76
-training/negative/s79\W-019-10.pgm;76
-training/negative/s79\W-019-11.pgm;76
-training/negative/s79\W-019-03.pgm;76
-training/negative/s79\W-019-18.pgm;76
-training/negative/s79\W-019-05.pgm;76
-training/negative/s79\W-019-01.pgm;76
-training/negative/s79\W-019-02.pgm;76
-training/negative/s79\W-019-23.pgm;76
-training/negative/s39\9.pgm;77
-training/negative/s39\3.pgm;77
-training/negative/s39\4.pgm;77
-training/negative/s39\6.pgm;77
-training/negative/s39\5.pgm;77
-training/negative/s39\10.pgm;77
-training/negative/s39\8.pgm;77
-training/negative/s39\7.pgm;77
-training/negative/s39\1.pgm;77
-training/negative/s39\2.pgm;77
-training/negative/s30\9.pgm;78
-training/negative/s30\3.pgm;78
-training/negative/s30\4.pgm;78
-training/negative/s30\6.pgm;78
-training/negative/s30\5.pgm;78
-training/negative/s30\10.pgm;78
-training/negative/s30\8.pgm;78
-training/negative/s30\7.pgm;78
-training/negative/s30\1.pgm;78
-training/negative/s30\2.pgm;78
-training/negative/s38\9.pgm;79
-training/negative/s38\3.pgm;79
-training/negative/s38\4.pgm;79
-training/negative/s38\6.pgm;79
-training/negative/s38\5.pgm;79
-training/negative/s38\10.pgm;79
-training/negative/s38\8.pgm;79
-training/negative/s38\7.pgm;79
-training/negative/s38\1.pgm;79
-training/negative/s38\2.pgm;79
-training/negative/s58\M-018-02.pgm;80
-training/negative/s58\M-018-06.pgm;80
-training/negative/s58\M-018-11.pgm;80
-training/negative/s58\M-018-05.pgm;80
-training/negative/s58\M-018-25.pgm;80
-training/negative/s58\M-018-24.pgm;80
-training/negative/s58\M-018-26.pgm;80
-training/negative/s58\M-018-04.pgm;80
-training/negative/s58\M-018-13.pgm;80
-training/negative/s58\M-018-17.pgm;80
-training/negative/s58\M-018-15.pgm;80
-training/negative/s58\M-018-21.pgm;80
-training/negative/s58\M-018-12.pgm;80
-training/negative/s58\M-018-03.pgm;80
-training/negative/s58\M-018-09.pgm;80
-training/negative/s58\M-018-23.pgm;80
-training/negative/s58\M-018-20.pgm;80
-training/negative/s58\M-018-22.pgm;80
-training/negative/s58\M-018-16.pgm;80
-training/negative/s58\M-018-14.pgm;80
-training/negative/s58\M-018-10.pgm;80
-training/negative/s58\M-018-01.pgm;80
-training/negative/s58\M-018-08.pgm;80
-training/negative/s58\M-018-19.pgm;80
-training/negative/s58\M-018-07.pgm;80
-training/negative/s58\M-018-18.pgm;80
-joyce Jiang\Images8.pgm;81
-joyce Jiang\Images20.pgm;81
-joyce Jiang\Images27.pgm;81
-joyce Jiang\Images10.pgm;81
-joyce Jiang\Images28.pgm;81
-joyce Jiang\Images26.pgm;81
-joyce Jiang\Images22.pgm;81
-joyce Jiang\Images15.pgm;81
-joyce Jiang\Images4.pgm;81
-joyce Jiang\Images14.pgm;81
-joyce Jiang\Images18.pgm;81
-joyce Jiang\Images29.pgm;81
-joyce Jiang\Images3.pgm;81
-joyce Jiang\Images2.pgm;81
-joyce Jiang\Images21.pgm;81
-joyce Jiang\Images13.pgm;81
-joyce Jiang\Images7.pgm;81
-joyce Jiang\Images1.pgm;81
-joyce Jiang\Images16.pgm;81
-joyce Jiang\Images23.pgm;81
-joyce Jiang\Images30.pgm;81
-joyce Jiang\Images5.pgm;81
-joyce Jiang\Images25.pgm;81
-joyce Jiang\Images17.pgm;81
-joyce Jiang\Images11.pgm;81
-joyce Jiang\Images6.pgm;81
-joyce Jiang\Images24.pgm;81
-joyce Jiang\Images12.pgm;81
-joyce Jiang\Images19.pgm;81
-joyce Jiang\Images9.pgm;81
-kaylee YE\Images8.pgm;82
-kaylee YE\Images20.pgm;82
-kaylee YE\Images27.pgm;82
-kaylee YE\Images10.pgm;82
-kaylee YE\Images28.pgm;82
-kaylee YE\Images26.pgm;82
-kaylee YE\Images22.pgm;82
-kaylee YE\Images15.pgm;82
-kaylee YE\Images4.pgm;82
-kaylee YE\Images14.pgm;82
-kaylee YE\Images18.pgm;82
-kaylee YE\Images29.pgm;82
-kaylee YE\Images3.pgm;82
-kaylee YE\Images2.pgm;82
-kaylee YE\Images21.pgm;82
-kaylee YE\Images13.pgm;82
-kaylee YE\Images7.pgm;82
-kaylee YE\Images1.pgm;82
-kaylee YE\Images16.pgm;82
-kaylee YE\Images23.pgm;82
-kaylee YE\Images30.pgm;82
-kaylee YE\Images5.pgm;82
-kaylee YE\Images25.pgm;82
-kaylee YE\Images17.pgm;82
-kaylee YE\Images11.pgm;82
-kaylee YE\Images6.pgm;82
-kaylee YE\Images24.pgm;82
-kaylee YE\Images12.pgm;82
-kaylee YE\Images19.pgm;82
-kaylee YE\Images9.pgm;82
+training/negative/s64\W-004-08.pgm;61
+training/negative/s64\W-004-06.pgm;61
+training/negative/s64\W-004-23.pgm;61
+training/negative/s64\W-004-26.pgm;61
+training/negative/s64\W-004-11.pgm;61
+training/negative/s64\W-004-03.pgm;61
+training/negative/s64\W-004-21.pgm;61
+training/negative/s64\W-004-17.pgm;61
+training/negative/s64\W-004-24.pgm;61
+training/negative/s64\W-004-12.pgm;61
+training/negative/s64\W-004-15.pgm;61
+training/negative/s64\W-004-14.pgm;61
+training/negative/s64\W-004-25.pgm;61
+training/negative/s64\W-004-10.pgm;61
+training/negative/s64\W-004-20.pgm;61
+training/negative/s64\W-004-19.pgm;61
+training/negative/s64\W-004-09.pgm;61
+training/negative/s64\W-004-13.pgm;61
+training/negative/s64\W-004-04.pgm;61
+training/negative/s64\W-004-05.pgm;61
+training/negative/s64\W-004-22.pgm;61
+training/negative/s64\W-004-07.pgm;61
+training/negative/s64\W-004-02.pgm;61
+training/negative/s64\W-004-18.pgm;61
+training/negative/s64\W-004-01.pgm;61
+training/negative/s64\W-004-16.pgm;61
+training/negative/s80\W-020-17.pgm;62
+training/negative/s80\W-020-03.pgm;62
+training/negative/s80\W-020-18.pgm;62
+training/negative/s80\W-020-16.pgm;62
+training/negative/s80\W-020-12.pgm;62
+training/negative/s80\W-020-10.pgm;62
+training/negative/s80\W-020-26.pgm;62
+training/negative/s80\W-020-19.pgm;62
+training/negative/s80\W-020-25.pgm;62
+training/negative/s80\W-020-08.pgm;62
+training/negative/s80\W-020-22.pgm;62
+training/negative/s80\W-020-21.pgm;62
+training/negative/s80\W-020-02.pgm;62
+training/negative/s80\W-020-20.pgm;62
+training/negative/s80\W-020-24.pgm;62
+training/negative/s80\W-020-05.pgm;62
+training/negative/s80\W-020-01.pgm;62
+training/negative/s80\W-020-04.pgm;62
+training/negative/s80\W-020-07.pgm;62
+training/negative/s80\W-020-11.pgm;62
+training/negative/s80\W-020-14.pgm;62
+training/negative/s80\W-020-13.pgm;62
+training/negative/s80\W-020-06.pgm;62
+training/negative/s80\W-020-15.pgm;62
+training/negative/s80\W-020-09.pgm;62
+training/negative/s80\W-020-23.pgm;62
+training/negative/s62\W-002-23.pgm;63
+training/negative/s62\W-002-16.pgm;63
+training/negative/s62\W-002-25.pgm;63
+training/negative/s62\W-002-13.pgm;63
+training/negative/s62\W-002-04.pgm;63
+training/negative/s62\W-002-07.pgm;63
+training/negative/s62\W-002-26.pgm;63
+training/negative/s62\W-002-05.pgm;63
+training/negative/s62\W-002-06.pgm;63
+training/negative/s62\W-002-02.pgm;63
+training/negative/s62\W-002-24.pgm;63
+training/negative/s62\W-002-12.pgm;63
+training/negative/s62\W-002-15.pgm;63
+training/negative/s62\W-002-10.pgm;63
+training/negative/s62\W-002-01.pgm;63
+training/negative/s62\W-002-19.pgm;63
+training/negative/s62\W-002-14.pgm;63
+training/negative/s62\W-002-17.pgm;63
+training/negative/s62\W-002-09.pgm;63
+training/negative/s62\W-002-21.pgm;63
+training/negative/s62\W-002-18.pgm;63
+training/negative/s62\W-002-03.pgm;63
+training/negative/s62\W-002-20.pgm;63
+training/negative/s62\W-002-11.pgm;63
+training/negative/s62\W-002-22.pgm;63
+training/negative/s62\W-002-08.pgm;63
+training/negative/s78\W-018-08.pgm;64
+training/negative/s78\W-018-05.pgm;64
+training/negative/s78\W-018-02.pgm;64
+training/negative/s78\W-018-12.pgm;64
+training/negative/s78\W-018-22.pgm;64
+training/negative/s78\W-018-21.pgm;64
+training/negative/s78\W-018-24.pgm;64
+training/negative/s78\W-018-13.pgm;64
+training/negative/s78\W-018-26.pgm;64
+training/negative/s78\W-018-17.pgm;64
+training/negative/s78\W-018-23.pgm;64
+training/negative/s78\W-018-04.pgm;64
+training/negative/s78\W-018-01.pgm;64
+training/negative/s78\W-018-11.pgm;64
+training/negative/s78\W-018-16.pgm;64
+training/negative/s78\W-018-14.pgm;64
+training/negative/s78\W-018-19.pgm;64
+training/negative/s78\W-018-25.pgm;64
+training/negative/s78\W-018-20.pgm;64
+training/negative/s78\W-018-06.pgm;64
+training/negative/s78\W-018-18.pgm;64
+training/negative/s78\W-018-03.pgm;64
+training/negative/s78\W-018-07.pgm;64
+training/negative/s78\W-018-10.pgm;64
+training/negative/s78\W-018-15.pgm;64
+training/negative/s78\W-018-09.pgm;64
+training/negative/s72\W-012-16.pgm;65
+training/negative/s72\W-012-04.pgm;65
+training/negative/s72\W-012-19.pgm;65
+training/negative/s72\W-012-12.pgm;65
+training/negative/s72\W-012-08.pgm;65
+training/negative/s72\W-012-10.pgm;65
+training/negative/s72\W-012-17.pgm;65
+training/negative/s72\W-012-18.pgm;65
+training/negative/s72\W-012-25.pgm;65
+training/negative/s72\W-012-03.pgm;65
+training/negative/s72\W-012-05.pgm;65
+training/negative/s72\W-012-07.pgm;65
+training/negative/s72\W-012-20.pgm;65
+training/negative/s72\W-012-14.pgm;65
+training/negative/s72\W-012-23.pgm;65
+training/negative/s72\W-012-26.pgm;65
+training/negative/s72\W-012-06.pgm;65
+training/negative/s72\W-012-02.pgm;65
+training/negative/s72\W-012-21.pgm;65
+training/negative/s72\W-012-22.pgm;65
+training/negative/s72\W-012-13.pgm;65
+training/negative/s72\W-012-15.pgm;65
+training/negative/s72\W-012-11.pgm;65
+training/negative/s72\W-012-09.pgm;65
+training/negative/s72\W-012-01.pgm;65
+training/negative/s72\W-012-24.pgm;65
+training/negative/s55\M-015-25.pgm;66
+training/negative/s55\M-015-01.pgm;66
+training/negative/s55\M-015-16.pgm;66
+training/negative/s55\M-015-10.pgm;66
+training/negative/s55\M-015-04.pgm;66
+training/negative/s55\M-015-14.pgm;66
+training/negative/s55\M-015-08.pgm;66
+training/negative/s55\M-015-15.pgm;66
+training/negative/s55\M-015-13.pgm;66
+training/negative/s55\M-015-23.pgm;66
+training/negative/s55\M-015-17.pgm;66
+training/negative/s55\M-015-02.pgm;66
+training/negative/s55\M-015-22.pgm;66
+training/negative/s55\M-015-03.pgm;66
+training/negative/s55\M-015-09.pgm;66
+training/negative/s55\M-015-12.pgm;66
+training/negative/s55\M-015-20.pgm;66
+training/negative/s55\M-015-26.pgm;66
+training/negative/s55\M-015-06.pgm;66
+training/negative/s55\M-015-24.pgm;66
+training/negative/s55\M-015-07.pgm;66
+training/negative/s55\M-015-18.pgm;66
+training/negative/s55\M-015-19.pgm;66
+training/negative/s55\M-015-11.pgm;66
+training/negative/s55\M-015-05.pgm;66
+training/negative/s55\M-015-21.pgm;66
+training/negative/s45\M-005-18.pgm;67
+training/negative/s45\M-005-20.pgm;67
+training/negative/s45\M-005-02.pgm;67
+training/negative/s45\M-005-25.pgm;67
+training/negative/s45\M-005-07.pgm;67
+training/negative/s45\M-005-26.pgm;67
+training/negative/s45\M-005-01.pgm;67
+training/negative/s45\M-005-06.pgm;67
+training/negative/s45\M-005-03.pgm;67
+training/negative/s45\M-005-17.pgm;67
+training/negative/s45\M-005-23.pgm;67
+training/negative/s45\M-005-04.pgm;67
+training/negative/s45\M-005-24.pgm;67
+training/negative/s45\M-005-14.pgm;67
+training/negative/s45\M-005-08.pgm;67
+training/negative/s45\M-005-09.pgm;67
+training/negative/s45\M-005-12.pgm;67
+training/negative/s45\M-005-19.pgm;67
+training/negative/s45\M-005-22.pgm;67
+training/negative/s45\M-005-16.pgm;67
+training/negative/s45\M-005-05.pgm;67
+training/negative/s45\M-005-15.pgm;67
+training/negative/s45\M-005-10.pgm;67
+training/negative/s45\M-005-13.pgm;67
+training/negative/s45\M-005-21.pgm;67
+training/negative/s45\M-005-11.pgm;67
+training/negative/s63\W-003-03.pgm;68
+training/negative/s63\W-003-23.pgm;68
+training/negative/s63\W-003-16.pgm;68
+training/negative/s63\W-003-02.pgm;68
+training/negative/s63\W-003-01.pgm;68
+training/negative/s63\W-003-18.pgm;68
+training/negative/s63\W-003-20.pgm;68
+training/negative/s63\W-003-14.pgm;68
+training/negative/s63\W-003-13.pgm;68
+training/negative/s63\W-003-08.pgm;68
+training/negative/s63\W-003-09.pgm;68
+training/negative/s63\W-003-26.pgm;68
+training/negative/s63\W-003-04.pgm;68
+training/negative/s63\W-003-22.pgm;68
+training/negative/s63\W-003-17.pgm;68
+training/negative/s63\W-003-25.pgm;68
+training/negative/s63\W-003-15.pgm;68
+training/negative/s63\W-003-10.pgm;68
+training/negative/s63\W-003-12.pgm;68
+training/negative/s63\W-003-11.pgm;68
+training/negative/s63\W-003-24.pgm;68
+training/negative/s63\W-003-21.pgm;68
+training/negative/s63\W-003-06.pgm;68
+training/negative/s63\W-003-05.pgm;68
+training/negative/s63\W-003-07.pgm;68
+training/negative/s63\W-003-19.pgm;68
+training/negative/s19\9.pgm;69
+training/negative/s19\3.pgm;69
+training/negative/s19\4.pgm;69
+training/negative/s19\6.pgm;69
+training/negative/s19\5.pgm;69
+training/negative/s19\10.pgm;69
+training/negative/s19\8.pgm;69
+training/negative/s19\7.pgm;69
+training/negative/s19\1.pgm;69
+training/negative/s19\2.pgm;69
+training/negative/s3\9.pgm;70
+training/negative/s3\3.pgm;70
+training/negative/s3\4.pgm;70
+training/negative/s3\6.pgm;70
+training/negative/s3\5.pgm;70
+training/negative/s3\10.pgm;70
+training/negative/s3\8.pgm;70
+training/negative/s3\7.pgm;70
+training/negative/s3\1.pgm;70
+training/negative/s3\2.pgm;70
+training/negative/s23\9.pgm;71
+training/negative/s23\3.pgm;71
+training/negative/s23\4.pgm;71
+training/negative/s23\6.pgm;71
+training/negative/s23\5.pgm;71
+training/negative/s23\10.pgm;71
+training/negative/s23\8.pgm;71
+training/negative/s23\7.pgm;71
+training/negative/s23\1.pgm;71
+training/negative/s23\2.pgm;71
+training/negative/s73\W-013-23.pgm;72
+training/negative/s73\W-013-26.pgm;72
+training/negative/s73\W-013-02.pgm;72
+training/negative/s73\W-013-20.pgm;72
+training/negative/s73\W-013-13.pgm;72
+training/negative/s73\W-013-22.pgm;72
+training/negative/s73\W-013-06.pgm;72
+training/negative/s73\W-013-10.pgm;72
+training/negative/s73\W-013-03.pgm;72
+training/negative/s73\W-013-05.pgm;72
+training/negative/s73\W-013-01.pgm;72
+training/negative/s73\W-013-15.pgm;72
+training/negative/s73\W-013-04.pgm;72
+training/negative/s73\W-013-25.pgm;72
+training/negative/s73\W-013-14.pgm;72
+training/negative/s73\W-013-21.pgm;72
+training/negative/s73\W-013-24.pgm;72
+training/negative/s73\W-013-12.pgm;72
+training/negative/s73\W-013-08.pgm;72
+training/negative/s73\W-013-17.pgm;72
+training/negative/s73\W-013-16.pgm;72
+training/negative/s73\W-013-07.pgm;72
+training/negative/s73\W-013-18.pgm;72
+training/negative/s73\W-013-11.pgm;72
+training/negative/s73\W-013-09.pgm;72
+training/negative/s73\W-013-19.pgm;72
+training/negative/s44\M-004-12.pgm;73
+training/negative/s44\M-004-07.pgm;73
+training/negative/s44\M-004-04.pgm;73
+training/negative/s44\M-004-23.pgm;73
+training/negative/s44\M-004-26.pgm;73
+training/negative/s44\M-004-17.pgm;73
+training/negative/s44\M-004-11.pgm;73
+training/negative/s44\M-004-20.pgm;73
+training/negative/s44\M-004-01.pgm;73
+training/negative/s44\M-004-09.pgm;73
+training/negative/s44\M-004-08.pgm;73
+training/negative/s44\M-004-24.pgm;73
+training/negative/s44\M-004-18.pgm;73
+training/negative/s44\M-004-05.pgm;73
+training/negative/s44\M-004-22.pgm;73
+training/negative/s44\M-004-16.pgm;73
+training/negative/s44\M-004-03.pgm;73
+training/negative/s44\M-004-15.pgm;73
+training/negative/s44\M-004-19.pgm;73
+training/negative/s44\M-004-21.pgm;73
+training/negative/s44\M-004-10.pgm;73
+training/negative/s44\M-004-06.pgm;73
+training/negative/s44\M-004-13.pgm;73
+training/negative/s44\M-004-14.pgm;73
+training/negative/s44\M-004-02.pgm;73
+training/negative/s44\M-004-25.pgm;73
+training/negative/s76\W-016-01.pgm;74
+training/negative/s76\W-016-15.pgm;74
+training/negative/s76\W-016-19.pgm;74
+training/negative/s76\W-016-10.pgm;74
+training/negative/s76\W-016-13.pgm;74
+training/negative/s76\W-016-17.pgm;74
+training/negative/s76\W-016-23.pgm;74
+training/negative/s76\W-016-26.pgm;74
+training/negative/s76\W-016-18.pgm;74
+training/negative/s76\W-016-16.pgm;74
+training/negative/s76\W-016-05.pgm;74
+training/negative/s76\W-016-08.pgm;74
+training/negative/s76\W-016-07.pgm;74
+training/negative/s76\W-016-14.pgm;74
+training/negative/s76\W-016-09.pgm;74
+training/negative/s76\W-016-02.pgm;74
+training/negative/s76\W-016-20.pgm;74
+training/negative/s76\W-016-04.pgm;74
+training/negative/s76\W-016-03.pgm;74
+training/negative/s76\W-016-11.pgm;74
+training/negative/s76\W-016-12.pgm;74
+training/negative/s76\W-016-25.pgm;74
+training/negative/s76\W-016-22.pgm;74
+training/negative/s76\W-016-21.pgm;74
+training/negative/s76\W-016-24.pgm;74
+training/negative/s76\W-016-06.pgm;74
+training/negative/s79\W-019-12.pgm;75
+training/negative/s79\W-019-15.pgm;75
+training/negative/s79\W-019-07.pgm;75
+training/negative/s79\W-019-22.pgm;75
+training/negative/s79\W-019-26.pgm;75
+training/negative/s79\W-019-06.pgm;75
+training/negative/s79\W-019-20.pgm;75
+training/negative/s79\W-019-17.pgm;75
+training/negative/s79\W-019-04.pgm;75
+training/negative/s79\W-019-25.pgm;75
+training/negative/s79\W-019-19.pgm;75
+training/negative/s79\W-019-21.pgm;75
+training/negative/s79\W-019-24.pgm;75
+training/negative/s79\W-019-13.pgm;75
+training/negative/s79\W-019-14.pgm;75
+training/negative/s79\W-019-09.pgm;75
+training/negative/s79\W-019-16.pgm;75
+training/negative/s79\W-019-08.pgm;75
+training/negative/s79\W-019-10.pgm;75
+training/negative/s79\W-019-11.pgm;75
+training/negative/s79\W-019-03.pgm;75
+training/negative/s79\W-019-18.pgm;75
+training/negative/s79\W-019-05.pgm;75
+training/negative/s79\W-019-01.pgm;75
+training/negative/s79\W-019-02.pgm;75
+training/negative/s79\W-019-23.pgm;75
+training/negative/s39\9.pgm;76
+training/negative/s39\3.pgm;76
+training/negative/s39\4.pgm;76
+training/negative/s39\6.pgm;76
+training/negative/s39\5.pgm;76
+training/negative/s39\10.pgm;76
+training/negative/s39\8.pgm;76
+training/negative/s39\7.pgm;76
+training/negative/s39\1.pgm;76
+training/negative/s39\2.pgm;76
+training/negative/s30\9.pgm;77
+training/negative/s30\3.pgm;77
+training/negative/s30\4.pgm;77
+training/negative/s30\6.pgm;77
+training/negative/s30\5.pgm;77
+training/negative/s30\10.pgm;77
+training/negative/s30\8.pgm;77
+training/negative/s30\7.pgm;77
+training/negative/s30\1.pgm;77
+training/negative/s30\2.pgm;77
+training/negative/s38\9.pgm;78
+training/negative/s38\3.pgm;78
+training/negative/s38\4.pgm;78
+training/negative/s38\6.pgm;78
+training/negative/s38\5.pgm;78
+training/negative/s38\10.pgm;78
+training/negative/s38\8.pgm;78
+training/negative/s38\7.pgm;78
+training/negative/s38\1.pgm;78
+training/negative/s38\2.pgm;78
+training/negative/s58\M-018-02.pgm;79
+training/negative/s58\M-018-06.pgm;79
+training/negative/s58\M-018-11.pgm;79
+training/negative/s58\M-018-05.pgm;79
+training/negative/s58\M-018-25.pgm;79
+training/negative/s58\M-018-24.pgm;79
+training/negative/s58\M-018-26.pgm;79
+training/negative/s58\M-018-04.pgm;79
+training/negative/s58\M-018-13.pgm;79
+training/negative/s58\M-018-17.pgm;79
+training/negative/s58\M-018-15.pgm;79
+training/negative/s58\M-018-21.pgm;79
+training/negative/s58\M-018-12.pgm;79
+training/negative/s58\M-018-03.pgm;79
+training/negative/s58\M-018-09.pgm;79
+training/negative/s58\M-018-23.pgm;79
+training/negative/s58\M-018-20.pgm;79
+training/negative/s58\M-018-22.pgm;79
+training/negative/s58\M-018-16.pgm;79
+training/negative/s58\M-018-14.pgm;79
+training/negative/s58\M-018-10.pgm;79
+training/negative/s58\M-018-01.pgm;79
+training/negative/s58\M-018-08.pgm;79
+training/negative/s58\M-018-19.pgm;79
+training/negative/s58\M-018-07.pgm;79
+training/negative/s58\M-018-18.pgm;79
+Kaylee Ye\Images8.pgm;80
+Kaylee Ye\Images20.pgm;80
+Kaylee Ye\Images27.pgm;80
+Kaylee Ye\Images10.pgm;80
+Kaylee Ye\Images28.pgm;80
+Kaylee Ye\Images26.pgm;80
+Kaylee Ye\Images22.pgm;80
+Kaylee Ye\Images15.pgm;80
+Kaylee Ye\Images4.pgm;80
+Kaylee Ye\Images14.pgm;80
+Kaylee Ye\Images18.pgm;80
+Kaylee Ye\Images29.pgm;80
+Kaylee Ye\Images3.pgm;80
+Kaylee Ye\Images2.pgm;80
+Kaylee Ye\Images21.pgm;80
+Kaylee Ye\Images13.pgm;80
+Kaylee Ye\Images7.pgm;80
+Kaylee Ye\Images1.pgm;80
+Kaylee Ye\Images16.pgm;80
+Kaylee Ye\Images23.pgm;80
+Kaylee Ye\Images30.pgm;80
+Kaylee Ye\Images5.pgm;80
+Kaylee Ye\Images25.pgm;80
+Kaylee Ye\Images17.pgm;80
+Kaylee Ye\Images11.pgm;80
+Kaylee Ye\Images6.pgm;80
+Kaylee Ye\Images24.pgm;80
+Kaylee Ye\Images12.pgm;80
+Kaylee Ye\Images19.pgm;80
+Kaylee Ye\Images9.pgm;80
+Kaylee Ye\Images8.pgm;81
+Kaylee Ye\Images20.pgm;81
+Kaylee Ye\Images27.pgm;81
+Kaylee Ye\Images10.pgm;81
+Kaylee Ye\Images28.pgm;81
+Kaylee Ye\Images26.pgm;81
+Kaylee Ye\Images22.pgm;81
+Kaylee Ye\Images15.pgm;81
+Kaylee Ye\Images4.pgm;81
+Kaylee Ye\Images14.pgm;81
+Kaylee Ye\Images18.pgm;81
+Kaylee Ye\Images29.pgm;81
+Kaylee Ye\Images3.pgm;81
+Kaylee Ye\Images2.pgm;81
+Kaylee Ye\Images21.pgm;81
+Kaylee Ye\Images13.pgm;81
+Kaylee Ye\Images7.pgm;81
+Kaylee Ye\Images1.pgm;81
+Kaylee Ye\Images16.pgm;81
+Kaylee Ye\Images23.pgm;81
+Kaylee Ye\Images30.pgm;81
+Kaylee Ye\Images5.pgm;81
+Kaylee Ye\Images25.pgm;81
+Kaylee Ye\Images17.pgm;81
+Kaylee Ye\Images11.pgm;81
+Kaylee Ye\Images6.pgm;81
+Kaylee Ye\Images24.pgm;81
+Kaylee Ye\Images12.pgm;81
+Kaylee Ye\Images19.pgm;81
+Kaylee Ye\Images9.pgm;81
