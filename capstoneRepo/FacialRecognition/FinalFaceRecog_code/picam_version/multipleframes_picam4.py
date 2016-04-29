@@ -88,7 +88,7 @@ class BioLock(tk.Tk):
 		
 		#######Copy this
 
-		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim,success_notAdmin,captureImage]:
+		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim,success_notAdmin,captureImage,voiceCapture_again]:
 			frame = f(container, self)
 			self.frames[f] = frame
 			frame.grid(row=0, column=0, sticky="nsew")
@@ -182,7 +182,7 @@ class BioLock(tk.Tk):
 			self.admin = False
 			self.id = -1
 			self.code = None
-			self.show_frame(failure)
+			self.show_frame(voiceCapture_again)
 
 	def unlock(self):
 		print "Send Unlock Signal"
@@ -341,6 +341,18 @@ class voiceCapture(tk.Frame):
 		button = tk.Button(self, text = "Ready to Record", command=controller.voiceAuth)
 		button.pack()
 		cancel = tk.Button(self,text= "Cancel", command=controller.cancel)
+		cancel.pack()
+
+class voiceCapture_again(tk.Frame):
+	def __init__(self,parent,controller):
+		self.controller = controller
+		tk.Frame.__init__(self,parent)
+		label = tk.Label(self, text= "Voice Capture")
+		label.pack()
+		instr = tk.Label(self, text="Do you want to try again?")
+		button_y = tk.Button(self, text = "Yes", command=controller.voiceAuth)
+		button_y.pack()
+		cancel = tk.Button(self,text= "No", command=controller.cancel)
 		cancel.pack()
 
 
