@@ -88,7 +88,7 @@ class BioLock(tk.Tk):
 		
 		#######Copy this
 
-		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim]:
+		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim,success_notAdmin]:
 			frame = f(container, self)
 			self.frames[f] = frame
 			frame.grid(row=0, column=0, sticky="nsew")
@@ -162,7 +162,10 @@ class BioLock(tk.Tk):
 			self.admin = self.adminDict[self.id]
 			self.access = self.accessDict[self.id]
 			if self.access:
-				self.show_frame(success)
+				if self.admin:
+					self.show_frame(success)
+				else:
+					self.show_frame(success_notAdmin)
 			else:
 				self.admin = False
 				self.id = -1
@@ -300,21 +303,9 @@ class faceCapture(tk.Frame):
 		#added new layout
 		toolbar = tk.Frame(self)
 		toolbar.pack(side="top", fill="x")
-		b1 = tk.Button(self, text="Enroll New User", command=controller.enroll)
 		b2 = tk.Button(self, text="authenticate", command=controller.faceAuth)
-		b3 = tk.Button(self, text="Create csv", command=FaceRecognizer.create_csv)
-		b4 = tk.Button(self, text="train", command=FaceRecognizer.trainLBPH)
-		#b1.pack(in_=toolbar, side="left")
 		b2.pack(in_=toolbar, side="left")
-		#b3.pack(in_=toolbar, side="left")
-		#b4.pack(in_=toolbar, side="left")
-		#self.text = tk.Text(self, wrap="word")
-		#controller.text.pack(side="top", fill="both", expand=True)
-		#self.text.tag_configure("stdout", foreground="#b22222")
-
-		#sys.stdout = TextRedirector(self.text, "stdout")
-		#sys.stderr = TextRedirector(self.text, "stderr")
-		#--------------------------------------------------------------------------
+	
 
 class voiceCapture(tk.Frame):
 	def __init__(self,parent,controller):
@@ -340,6 +331,14 @@ class success(tk.Frame):
 		enroll = tk.Button(self, text="Enroll new User", command=controller.newUser)
 
 		enroll.pack()
+
+class success_notAdmin(tk.Frame):
+	def __init__(self,parent,controller):
+		tk.Frame.__init__(self,parent)
+		label = tk.Label(self, text= "Authentication Successful")
+		label.pack()
+		unlock = tk.Button(self, text= "Unlock System", command= controller.unlock)
+		unlock.pack()
 
 
 class failure(tk.Frame):
