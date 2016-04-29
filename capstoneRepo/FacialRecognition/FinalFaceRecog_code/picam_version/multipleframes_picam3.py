@@ -88,7 +88,7 @@ class BioLock(tk.Tk):
 		
 		#######Copy this
 
-		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim,success_notAdmin,facecap]:
+		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim,success_notAdmin,captureImage]:
 			frame = f(container, self)
 			self.frames[f] = frame
 			frame.grid(row=0, column=0, sticky="nsew")
