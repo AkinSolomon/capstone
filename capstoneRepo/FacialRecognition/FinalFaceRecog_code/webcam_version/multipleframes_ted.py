@@ -2,7 +2,7 @@ import Tkinter as tk
 import numpy as np
 import sys
 import os.path
-import csv
+import xml.etree.ElementTree as ET
 
 import fnmatch
 import cv2
@@ -12,8 +12,6 @@ import face
 import shutil
 
 import speaker
-
-#import FinalFaceRecog as fr
 
 TRAINING_FILE='train_LBPH.xml'
 BASE_PATH="training/negative"
@@ -28,12 +26,12 @@ class BioLock(tk.Tk):
 		tk.Tk.__init__(self, *args, **kwargs)
 		# self.attributes('-fullscreen',True)
 		container = tk.Frame(self)
-
+		
 		container.pack(side="top", fill="both", expand=True)
 
 		container.grid_rowconfigure(0, weight=3)
 		container.grid_columnconfigure(0, weight=3)
-
+		
 		newcontainer=tk.Frame(self)
 		newcontainer.pack(side="bottom",fill="both",expand=True)
 		container.grid_rowconfigure(1, weight=7)
@@ -46,10 +44,23 @@ class BioLock(tk.Tk):
 		sys.stdout = TextRedirector(self.text, "stdout")
 		sys.stderr = TextRedirector(self.text, "stderr")
 
-		# TODO Initialize user dictionary (either load from file or start empty one)
+		############# Here
+
 		self.adminDict = {}
 		self.accessDict = {}
 		self.codeDict = {}
+		tree = ET.parse('voicedata.xml')
+		root = tree.getroot()
+		for child in root:
+			idString = child.tag
+			ID = int(idString[1:len(idString)])
+			print ID
+			self.adminDict[ID] = child.get("admin")
+			self.accessDict[ID] = child.get("access")
+			self.codeDict[ID] = np.load('Arrays/{}.npy'.format(ID))
+
+		############## To here
+
 
 		# Initalize new user variables
 		self.newAccess = False
@@ -68,13 +79,22 @@ class BioLock(tk.Tk):
 		# Initialize Frames
 		self.frames = {}
 
-		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure]:
+		
+		#######Copy this
+
+		for f in [faceCapture, voiceCapture, enroll, enrollFace, enrollVoice, success, failure,enrollDisclaim,authDisclaim]:
 			frame = f(container, self)
 			self.frames[f] = frame
 			frame.grid(row=0, column=0, sticky="nsew")
 
-		# TODO will depend on intial conditions
-		self.show_frame(enroll)
+
+
+		if len(self.codeDict) == 0:
+			self.show_frame(enrollDisclaim)
+		else:
+			self.show_frame(authDisclaim)
+
+		#######	To here
 
 	# Brings specified frame to front of app
 	def show_frame(self, cont):
@@ -105,12 +125,14 @@ class BioLock(tk.Tk):
 		self.adminDict[self.newID] = self.newAdmin
 		self.accessDict[self.newID] = self.newAccess
 		self.codeDict[self.newID] = self.newCode
-		self.show_frame(authDisclaimer)
+		self.show_frame(authDisclaim)
 		np.save('Arrays/{}'.format(self.newID),self.newCode)
-		f = csv.open('voicedata.csv','a')
+		tree = ET.parse('voicedata.xml')
+		root = tree.getroot()
+		element = ET.SubElement(root,'s'+str(self.newID),admin=str(self.newAdmin),access=str(self.newAccess))
+		tree.write('voicedata.xml')
 		
-		
-		
+
 
 	def faceAuth(self):
 		# Facial Recognition
@@ -184,10 +206,12 @@ class BioLock(tk.Tk):
 class enrollDisclaim(tk.Frame):
 	def __init__(self,parent,controller):
 		tk.Frame.__init__(self,parent)
-		label = tk.Label(self, text="Disclaimer")
+		label = tk.Label(self, text="Enrollment Disclaimer")
 		label.pack()
 		disclaimer = tk.Label(self, text="This program will collect your biometric information, including a photo of your face as well as your voice. Using this device conveys your acceptance of these terms. Tap OK to continue.")
+		disclaimer.pack()
 		button = tk.Button(self, text='OK', command=controller.startEnroll)
+		button.pack()
 
 class authDisclaim(tk.Frame):
 	def __init__(self,parent,controller):
@@ -195,7 +219,9 @@ class authDisclaim(tk.Frame):
 		label = tk.Label(self, text="Disclaimer")
 		label.pack()
 		disclaimer = tk.Label(self, text="This program will collect your biometric information, including a photo of your face as well as your voice. Using this device conveys your acceptance of these terms. Tap OK to continue.")
-		button = tk.Button(self, text='OK', command=controller.startEnroll)
+		disclaimer.pack()
+		button = tk.Button(self, text='OK', command=controller.startAuth)
+		button.pack()
 
 class enroll(tk.Frame):
 	def __init__(self,parent,controller):
@@ -463,7 +489,7 @@ class FaceRecognizer(object):
 
 		cv2.namedWindow("preview")
 
-		vc = cv2.VideoCapture(1) # device ID may not be 0
+		vc = cv2.VideoCapture(0) # device ID may not be 0
 
 		counter=0
 		#counter2=0
@@ -604,7 +630,7 @@ class FaceRecognizer(object):
 		confidences=[]
 		labels=[]
 
-		vc = cv2.VideoCapture(1)
+		vc = cv2.VideoCapture(0)
 		print 'Looking for face...'
 		if vc.isOpened(): # try to get the first frame
 			rval, frame = vc.read()

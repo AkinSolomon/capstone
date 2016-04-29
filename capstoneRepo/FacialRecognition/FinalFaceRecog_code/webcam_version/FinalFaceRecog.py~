@@ -409,12 +409,12 @@ def Authenticate():
 #------------------------------------------------------------------------------------TESTING MAIN
 
 if __name__ == '__main__':
-	create_csv()
-	trainLBPH()
+	#create_csv()
+	#trainLBPH()
 	#name="kayleetesting"
 	#LBPHupdate(name)
 
-	#successful,label = Authenticate()
-	#print successful
-	#print label
+	successful,label = Authenticate()
+	print successful
+	print label
 	

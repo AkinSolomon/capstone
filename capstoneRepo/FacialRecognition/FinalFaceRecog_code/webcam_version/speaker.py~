@@ -259,3 +259,5 @@ def test(code):
 	
 	return False
 
+c = train()
+print test(c)
