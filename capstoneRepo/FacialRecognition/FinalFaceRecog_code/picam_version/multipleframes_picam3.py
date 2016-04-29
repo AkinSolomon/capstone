@@ -158,13 +158,17 @@ class BioLock(tk.Tk):
 	def voiceAuth(self):
 		# Run speaker Recognition (including voice capture)
 		successful = speaker.test(self.code)
-		if successful:
+		if successful is True:
 			self.admin = self.adminDict[self.id]
 			self.access = self.accessDict[self.id]
-			if self.access:
-				if self.admin:
+			print self.access+","+self.admin
+			#print str(bool(self.access))+","+str(bool(self.admin))
+			if self.access=="True":
+				if self.admin=="True":
+					#print "!!"+self.admin
 					self.show_frame(success)
 				else:
+					#print "!?"+self.admin
 					self.show_frame(success_notAdmin)
 			else:
 				self.admin = False
@@ -199,7 +203,7 @@ class BioLock(tk.Tk):
 		self.show_frame(authDisclaim)
 	
 	def newUser(self):
-		if self.admin:
+		if self.admin=="True":
 			self.show_frame(enrollDisclaim)
 
 	def startEnroll(self):
